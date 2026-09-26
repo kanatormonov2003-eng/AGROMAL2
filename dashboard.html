@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Торговая сессия — AGROMAL</title>
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="./assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/agromal-light-theme.css">
+  <script src="./assets/js/config.js"></script>
+  <script type="module" src="./assets/js/dashboard.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="./dashboard.html">
+        <img class="brand__logo" src="./assets/img/logo.jfif" alt="">
+        <span class="brand__copy">
+          <b class="brand__name">AGROMAL.kg</b>
+          <small class="brand__tag" data-i18n="taglineAfter"></small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="button button--ghost button--small" id="admin-link" href="./admin.html" data-i18n="admin" hidden></a>
+        <nav class="lang-switch" aria-label="Язык интерфейса">
+          <button type="button" data-lang="ky">КГ</button>
+          <button type="button" data-lang="ru">РУС</button>
+          <button type="button" data-lang="en">ENG</button>
+        </nav>
+        <button class="button button--ghost button--small" type="button" data-logout data-i18n="logout"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <div class="shell">
+      <div class="app-title">
+        <div>
+          <span class="micro" data-i18n="privateAccess"></span>
+          <h1 data-i18n="dashboardTitle"></h1>
+          <p data-i18n="dashboardIntro"></p>
+        </div>
+        <div class="user-meta" id="user-meta"></div>
+      </div>
+
+      <section aria-labelledby="lots-heading">
+        <div class="toolbar">
+          <h2 id="lots-heading" data-i18n="lots"></h2>
+          <span class="micro" data-i18n="demoData"></span>
+        </div>
+        <div class="lots-filters" id="lots-filters">
+
+  <div class="lots-filters__search field">
+    <label for="lot-search" data-i18n="filterSearch"></label>
+    <input
+      id="lot-search"
+      type="search"
+      autocomplete="off"
+      data-i18n-placeholder="filterSearchPlaceholder"
+    >
+  </div>
+
+  <div class="lots-filters__item field">
+    <label for="lot-type" data-i18n="filterType"></label>
+    <select id="lot-type">
+      <option value="" data-i18n="filterAll"></option>
+    </select>
+  </div>
+
+  <div class="lots-filters__item field">
+    <label for="lot-region" data-i18n="filterRegion"></label>
+    <select id="lot-region">
+      <option value="" data-i18n="filterAll"></option>
+    </select>
+  </div>
+
+  <div class="lots-filters__item field">
+    <label for="lot-status" data-i18n="filterStatus"></label>
+    <select id="lot-status">
+      <option value="" data-i18n="filterAll"></option>
+    </select>
+  </div>
+
+  <div class="lots-filters__price">
+    <div class="field">
+      <label for="lot-price-min" data-i18n="filterPriceFrom"></label>
+      <input
+        id="lot-price-min"
+        type="number"
+        min="0"
+        step="1"
+      >
+    </div>
+
+    <div class="field">
+      <label for="lot-price-max" data-i18n="filterPriceTo"></label>
+      <input
+        id="lot-price-max"
+        type="number"
+        min="0"
+        step="1"
+      >
+    </div>
+  </div>
+
+  <button
+    class="button button--ghost button--small lots-filters__reset"
+    id="lot-filters-reset"
+    type="button"
+    data-i18n="filterReset"
+  ></button>
+
+</div>
+        <div id="lots-state" class="notice notice--loading" role="status" data-i18n="loading"></div>
+
+       <div
+  class="desktop-lots"
+  id="desktop-lots-list"
+  hidden
+></div>
+
+        <div class="mobile-lots" id="lot-cards"></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal" id="booking-modal" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+
+      <div class="modal__body">
+        <div id="booking-form-view">
+          <div class="card__title modal__title-block">
+            <h2 id="booking-modal-title" data-i18n="bookingTitle"></h2>
+          </div>
+
+          <div class="booking-summary" id="booking-summary"></div>
+
+          <form id="booking-form" novalidate>
+            <div class="field">
+              <label for="booking-name" data-i18n="customerName"></label>
+              <input id="booking-name" name="customer_name" maxlength="160" autocomplete="name" required>
+            </div>
+            <div class="field">
+  <label for="booking-inn" data-i18n="bookingInn"></label>
+  <input
+    id="booking-inn"
+    name="organization_inn"
+    type="text"
+    readonly
+    aria-readonly="true"
+    autocomplete="off"
+  >
+</div>
+            <div class="field">
+              <label for="booking-phone" data-i18n="customerPhone"></label>
+              <input id="booking-phone" name="customer_phone" inputmode="tel" autocomplete="tel" maxlength="32" required>
+            </div>
+
+            <div class="field">
+              <label for="booking-comment" data-i18n="bookingComment"></label>
+              <textarea id="booking-comment" name="comment" maxlength="1000" rows="4"></textarea>
+            </div>
+
+            <button class="button button--wide" id="booking-submit" type="submit" data-i18n="bookingConfirm"></button>
+
+            <p class="notice notice--error" id="booking-error" role="alert" aria-live="polite" hidden></p>
+          </form>
+        </div>
+
+        <div id="booking-success-view" hidden>
+          <div class="card__title modal__title-block">
+            <h2 data-i18n="bookingAcceptedTitle"></h2>
+          </div>
+          <div class="booking-success" id="booking-success"></div>
+          <div class="button-row">
+            <button class="button button--wide" type="button" data-modal-close data-i18n="close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="shell footer__inner">
+      <span>© 2026 ТОРГОВЫЙ ДОМ AGROMAL</span>
+      <span data-i18n="footerDocs"></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,2418 @@
+/* =========================================================
+   AGROMAL вЂ” HOMEPAGE ONLY
+
+   main.css
+   в†“
+   agromal-homepage-overrides.css
+
+   Desktop composition (1:1 СЃ РјР°РєРµС‚РѕРј):
+   HEADER: BRAND | TAG | LANG
+   BOARD: LEFT RAIL | CENTER  ||  TRADING TERMINAL
+   DEMO LOTS (5 РІ СЂСЏРґ)
+   LEGAL STATUS
+   ========================================================= */
+
+:root {
+  --agro-bg: #090B0B;
+  --agro-panel: #0D1110;
+  --agro-panel-deep: #090B0B;
+
+  --agro-border: #242927;
+  --agro-border-soft: #1B201D;
+
+  --agro-text: #E7E8E5;
+  --agro-text-soft: #B9BFBB;
+  --agro-muted: #858B87;
+
+  --agro-gold: #B89A55;
+  --agro-gold-bright: #D0B56A;
+  --agro-gold-soft: rgba(184, 154, 85, .32);
+
+  --agro-green: #176B3A;
+  --agro-green-bright: #3F8A5D;
+
+  --agro-red: #C45D5D;
+
+  --agro-shell: 1266px;
+  --agro-rail: 190px;
+  --agro-terminal: 508px;
+  --agro-gap: 14px;
+}
+body.homepage {
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 12px 0 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 52% 6%, rgba(72, 88, 74, .07), transparent 38%),
+    radial-gradient(circle at 12% 2%, rgba(146, 118, 50, .045), transparent 26%),
+    linear-gradient(180deg, #060807 0%, #080b09 55%, #060807 100%);
+  color: var(--agro-text);
+  font-size: 14px;
+}
+
+body.homepage::before {
+  z-index: 0;
+  opacity: .04;
+  background-image:
+    linear-gradient(to right, rgba(125, 135, 128, .2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(125, 135, 128, .2) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 72%);
+}
+
+body.homepage .shell,
+body.homepage .homepage-demo-lots,
+body.homepage .homepage-legal {
+  width: min(var(--agro-shell), calc(100% - 28px));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+body.homepage .site-header--home {
+  position: relative;
+  z-index: 20;
+  border: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+body.homepage .site-header__inner--home {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 2px 0 12px;
+}
+
+body.homepage .brand--home {
+  position: relative;
+  min-width: 0;
+  gap: 11px;
+  text-decoration: none;
+}
+
+body.homepage .brand__logo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border: 1px solid var(--agro-gold-soft);
+  border-radius: 50%;
+  background: #101311;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+body.homepage .brand__name {
+  display: block;
+   color: var(--agro-gold-bright);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+
+body.homepage .brand-divider {
+  width: 1px;
+  height: 34px;
+  flex: 0 0 1px;
+  background: rgba(201, 166, 84, .34);
+}
+
+body.homepage .brand__tag {
+  display: block;
+  margin: 0;
+  max-width: 260px;
+  color: #9aa19b;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: .095em;
+  text-transform: uppercase;
+}
+
+body.homepage .lang-switch--compact {
+  position: static;
+  margin-left: auto;
+}
+
+body.homepage .lang-switch {
+  gap: 0;
+  padding: 3px 5px;
+  border-color: #272e29;
+  border-radius: 5px;
+  background: rgba(9, 12, 10, .8);
+}
+
+body.homepage .lang-switch__sep {
+  color: #333b35;
+  font-size: 10px;
+  line-height: 1;
+}
+
+body.homepage .lang-switch button {
+  min-height: 24px;
+  padding: 3px 9px;
+  color: #9aa19b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  background: transparent;
+  transition: color .15s ease;
+}
+
+body.homepage .lang-switch button:hover {
+  color: var(--agro-text);
+}
+
+body.homepage .lang-switch button.is-active {
+  color: #e9ebe7;
+  background: transparent;
+}
+
+/* =========================================================
+   HERO SHELL
+   ========================================================= */
+
+body.homepage .hero--homepage {
+  padding: 0;
+}
+
+body.homepage .hero__grid--reference {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--agro-terminal);
+  grid-template-areas: "board terminal";
+  gap: var(--agro-gap);
+  align-items: stretch;
+}
+
+body.homepage .hero__board {
+  grid-area: board;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: var(--agro-rail) minmax(0, 1fr);
+  border: 1px solid #232a25;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #0d110f, #080b09);
+  overflow: hidden;
+}
+
+body.homepage .hero__terminal {
+  grid-area: terminal;
+}
+
+/* =========================================================
+   LEFT RAIL
+   ========================================================= */
+
+body.homepage .ref-rail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 0 0;
+  border-right: 1px solid #222925;
+  background: linear-gradient(180deg, #101410, #0a0d0b);
+}
+
+body.homepage .ref-rail__item {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: background .16s ease;
+}
+
+body.homepage .ref-rail__item:hover {
+  background: rgba(255, 255, 255, .016);
+}
+
+body.homepage .ref-rail__item + .ref-rail__item {
+  border-top: 1px solid rgba(255, 255, 255, .045);
+}
+
+body.homepage .ref-rail__icon {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .ref-rail__icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+body.homepage .ref-rail__item--highlight {
+  border-color: rgba(255, 255, 255, .045);
+  background: transparent;
+}
+
+body.homepage .ref-rail__item--highlight .ref-rail__icon {
+  border: 0;
+  color: var(--agro-gold-bright);
+  background: transparent;
+}
+
+body.homepage .ref-rail__label {
+  color: #cdd2ce;
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+body.homepage .ref-rail__value {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px 4px;
+  border: 1px solid rgba(201, 166, 84, .55);
+  border-radius: 4px;
+  color: #ecdca8;
+  background: rgba(201, 166, 84, .05);
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .05em;
+  text-align: center;
+}
+
+body.homepage .ref-rail__art {
+  margin-top: auto;
+  padding-top: 18px;
+  opacity: .85;
+}
+
+body.homepage .ref-rail__art svg {
+  width: 100%;
+  height: 70px;
+  display: block;
+}
+
+/* =========================================================
+   CENTER
+   ========================================================= */
+
+body.homepage .hero__content--reference {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  padding: 20px 18px 14px;
+  overflow: hidden;
+}
+
+/* С„РѕС‚Рѕ СЃС‚Р°РґР° вЂ” РїРѕР»РѕР¶Рё С„Р°Р№Р» РІ ./assets/img/hero-cattle.jpg */
+
+body.homepage .hero__content--reference::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 62%;
+  height: 268px;
+  background-image:
+    linear-gradient(90deg, #0b0f0c 0%, rgba(11, 15, 12, .55) 42%, rgba(11, 15, 12, .1) 100%),
+    linear-gradient(180deg, rgba(11, 15, 12, 0) 40%, #0b0f0c 100%),
+    url("./assets/img/hero-cattle.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, center, center right;
+  pointer-events: none;
+}
+
+body.homepage .hero__content--reference > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.homepage .hero-b2b-title {
+  width: 100%;
+  max-width: 34ch;
+  margin: 0;
+  color: #f2f3ef;
+  font-size: clamp(21px, 1.65vw, 24px);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+
+body.homepage .hero-b2b-title__mark {
+  color: var(--agro-gold);
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+/* FORMULA */
+
+body.homepage .hero-b2b-formula {
+  width: 100%;
+  max-width: 615px;
+  margin: 18px 0 0;
+  padding: 11px 14px 13px;
+  border: 1px solid rgba(184, 154, 85, .52);
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgba(24, 26, 22, .96), rgba(12, 15, 12, .96));
+  text-align: center;
+}
+
+body.homepage .hero-b2b-formula .hero-b2b-section-label,
+body.homepage .hero-b2b-principles > .hero-b2b-section-label {
+  display: block;
+  color: var(--agro-gold-bright);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+body.homepage .hero-b2b-formula-main {
+  display: block;
+  margin-top: 7px;
+  color: #E7E8E5;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: .025em;
+}
+
+body.homepage .hero-b2b-formula-note {
+  margin: 7px 0 0;
+  color: #b0a37f;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* PRINCIPLES + FEATURES */
+
+body.homepage .hero-b2b-principles-wrap {
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 206px;
+  gap: 14px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+body.homepage .hero-b2b-principles {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+body.homepage .hero-b2b-principles > .hero-b2b-section-label {
+  margin: 0 0 6px;
+  letter-spacing: .1em;
+}
+
+body.homepage .hero-b2b-principles ol {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: agro-step;
+  color: #b9bfba;
+  font-size: 9.5px;
+  line-height: 1.45;
+}
+
+body.homepage .hero-b2b-principles li {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .05);
+}
+
+body.homepage .hero-b2b-principles li:first-child {
+  border-top: 1px solid rgba(255, 255, 255, .05);
+}
+
+body.homepage .hero-b2b-principles li::before {
+  counter-increment: agro-step;
+  content: counter(agro-step);
+  width: 17px;
+  height: 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 166, 84, .7);
+  border-radius: 50%;
+  color: var(--agro-gold-bright);
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+body.homepage .ref-feature-grid {
+  width: 206px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 0;
+  align-content: start;
+}
+
+body.homepage .ref-feature {
+  min-width: 0;
+  min-height: 0;
+  padding: 9px 11px 10px;
+  border: 1px solid #262d28;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #12160f, #0c0f0c);
+  transition: border-color .18s ease, transform .18s ease;
+}
+
+body.homepage .ref-feature:hover {
+  border-color: rgba(201, 166, 84, .45);
+  transform: translateY(-1px);
+}
+
+body.homepage .ref-feature__head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--agro-gold-bright);
+  font-size: 8.5px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+body.homepage .ref-feature__head span {
+  flex: 0 0 auto;
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+}
+
+body.homepage .ref-feature__head span svg {
+  width: 13px;
+  height: 13px;
+}
+
+body.homepage .ref-feature p {
+  margin: 6px 0 0;
+  color: #8b938d;
+  font-size: 8.5px;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   SYSTEMS STRIP вЂ” РїРѕРґ С†РµРЅС‚СЂР°Р»СЊРЅРѕР№ РєРѕР»РѕРЅРєРѕР№
+   ========================================================= */
+
+body.homepage .hero-b2b-systems {
+  width: 100%;
+  max-width: none;
+  margin-top: 18px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(255, 255, 255, .05);
+}
+
+body.homepage .hero-b2b-systems .sync-strip--homepage {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+body.homepage .hero-b2b-systems .sync-strip__flow--homepage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+body.homepage .hero-b2b-systems .sync-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  color: #8a928c;
+  font-size: 6.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+body.homepage .hero-b2b-systems .sync-logo img,
+body.homepage .hero-b2b-systems .sync-platform-mark,
+body.homepage .hero-b2b-systems .sync-halal-mark {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+  min-height: 27px;
+  flex-basis: 27px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .02);
+}
+
+body.homepage .hero-b2b-systems .sync-logo img {
+  padding: 3px;
+  object-fit: contain;
+  opacity: .92;
+  filter: grayscale(1);
+}
+
+body.homepage .hero-b2b-systems .sync-ettn-mark {
+  color: #e4e7e3;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+body.homepage .hero-b2b-systems .sync-platform-mark {
+  color: var(--agro-green-bright);
+  border-color: rgba(79, 141, 107, .4);
+  background: rgba(79, 141, 107, .07);
+}
+
+body.homepage .hero-b2b-systems .sync-platform-mark svg {
+  width: 15px;
+  height: 15px;
+}
+
+body.homepage .hero-b2b-systems .sync-halal-mark {
+  color: #6fc47f;
+  border-color: rgba(34, 197, 94, .35);
+  background: rgba(34, 197, 94, .06);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+body.homepage .hero-b2b-systems .sync-logo--platform,
+body.homepage .hero-b2b-systems .sync-logo--halal {
+  color: var(--agro-green-bright);
+}
+
+body.homepage .hero-b2b-systems .sync-logo--halal b {
+  display: block;
+  color: var(--agro-gold);
+  font-weight: 700;
+}
+
+body.homepage .hero-b2b-systems .sync-arrow {
+  flex: 0 0 auto;
+  color: #5b635d;
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* =========================================================
+   TRADING TERMINAL
+   ========================================================= */
+
+body.homepage .hero__terminal {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 18px 20px 20px;
+  align-self: stretch;
+  justify-self: stretch;
+  border: 1px solid rgba(201, 166, 84, .22);
+  border-radius: 9px;
+  background: linear-gradient(160deg, #101410, #080b09);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .22);
+  overflow: hidden;
+}
+
+body.homepage .hero__terminal .login-panel {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body.homepage .hero__terminal .panel__head {
+  margin: 0 0 14px;
+  padding: 0;
+  border-bottom: 0;
+  text-align: center;
+}
+
+body.homepage .hero__terminal .panel__head-icon {
+  display: grid;
+  place-items: center;
+  margin: 0 auto 7px;
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .hero__terminal .panel__head-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+body.homepage .hero__terminal .panel__head h2 {
+  margin: 0;
+  color: #eceee9;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .07em;
+}
+
+body.homepage .hero__terminal .field {
+  position: relative;
+  display: block;
+  margin: 0 0 9px;
+}
+
+body.homepage .hero__terminal .field__icon {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  color: #8b9a8f;
+  pointer-events: none;
+}
+
+body.homepage .hero__terminal .field__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+body.homepage .hero__terminal .field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 42px;
+  border: 1px solid #2b322d;
+  border-radius: 5px;
+  background: #0e1211;
+  color: #edf0ec;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: none;
+  transition: border-color .16s ease, background .16s ease;
+}
+
+body.homepage .hero__terminal .field input::placeholder {
+  color: #7d857f;
+}
+
+body.homepage .hero__terminal .field input:hover {
+  border-color: #38403a;
+}
+
+body.homepage .hero__terminal .field input:focus {
+  outline: none;
+  border-color: rgba(114, 194, 127, .5);
+  box-shadow: 0 0 0 2px rgba(45, 139, 67, .12);
+}
+
+body.homepage .hero__terminal .field__eye {
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #7d857f;
+  cursor: pointer;
+  transition: color .16s ease;
+}
+
+body.homepage .hero__terminal .field__eye:hover {
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .hero__terminal .field__eye svg {
+  width: 17px;
+  height: 17px;
+}
+
+body.homepage .hero__terminal .field__eye.is-open .field__eye-slash {
+  display: none;
+}
+
+body.homepage #login-button {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 3px;
+  padding: 10px 12px;
+   border: 1px solid #1F7845;
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    #1B7040,
+    #176B3A
+  );
+  color: #E7E8E5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  transition: filter .16s ease, transform .16s ease;
+}
+
+body.homepage #login-button:hover {
+  border-color: #2B8752;
+  background: linear-gradient(
+    180deg,
+    #217A46,
+    #1B7040
+  );
+  filter: none;
+}
+
+body.homepage #login-button:active {
+  transform: translateY(1px);
+}
+
+body.homepage .hero__terminal #login-message {
+  margin: 9px 0 0;
+  padding: 8px 10px;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+/* ACCESS */
+
+body.homepage .hero-access {
+  margin-top: 14px;
+}
+
+body.homepage .hero-access__divider {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+body.homepage .hero-access__divider span {
+  height: 1px;
+  background: #232a25;
+}
+
+body.homepage .hero-access__divider b {
+  color: #9aa19b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: none;
+}
+
+body.homepage .hero-access__caption {
+  margin-bottom: 11px;
+  color: #a7aea8;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+}
+
+body.homepage .hero-access__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+body.homepage .hero-access-card {
+  position: relative;
+  min-width: 0;
+  min-height: 128px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 9px;
+  padding: 13px 13px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform .16s ease, filter .16s ease;
+}
+
+body.homepage .hero-access-card:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+}
+
+body.homepage .hero-access-card__icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+body.homepage .hero-access-card__icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+body.homepage .hero-access-card__content {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 6px;
+}
+
+body.homepage .hero-access-card__content strong {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+body.homepage .hero-access-card__content small {
+  color: #b6bdb7;
+  font-size: 9.5px;
+  line-height: 1.55;
+}
+
+body.homepage .hero-access-card__arrow {
+  position: absolute;
+  right: 11px;
+  bottom: 7px;
+  font-size: 15px;
+  line-height: 1;
+  transition: transform .16s ease;
+}
+
+body.homepage .hero-access-card:hover .hero-access-card__arrow {
+  transform: translateX(3px);
+}
+
+body.homepage .hero-access-card--buyer {
+  border: 1px solid rgba(23, 107, 58, .65);
+  background: #0D1712;
+}
+
+body.homepage .hero-access-card--buyer .hero-access-card__icon {
+  border: 1px solid rgba(63, 138, 93, .55);
+  color: #7AAE8C;
+  background: rgba(23, 107, 58, .14);
+}
+
+body.homepage .hero-access-card--buyer .hero-access-card__content strong {
+  color: #cbe8cf;
+}
+
+body.homepage .hero-access-card--buyer .hero-access-card__arrow {
+  color: #8abd92;
+}
+
+body.homepage .hero-access-card--farm {
+  border: 1px solid rgba(200, 167, 85, .62);
+  background: #201a11;
+}
+
+body.homepage .hero-access-card--farm .hero-access-card__icon {
+  border: 1px solid rgba(200, 167, 85, .72);
+  color: var(--agro-gold-bright);
+  background: rgba(52, 42, 22, .6);
+}
+
+body.homepage .hero-access-card--farm .hero-access-card__content strong,
+body.homepage .hero-access-card--farm .hero-access-card__arrow {
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .hero-access-card--farm .hero-access-card__content small {
+  color: #d8cdad;
+}
+
+/* HELP + TRUST */
+
+body.homepage .hero-assist {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: 11px;
+  margin-top: 11px;
+}
+
+body.homepage .hero-help,
+body.homepage .hero-trust {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  align-items: center;
+  gap: 11px;
+  margin: 0;
+  padding: 13px;
+  border: 1px solid #242b26;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #0f1310, #0a0d0b);
+}
+
+body.homepage .hero-help__icon,
+body.homepage .hero-help__icon svg,
+body.homepage .hero-trust__icon,
+body.homepage .hero-trust__icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .hero-help__content {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+body.homepage .hero-help__content strong {
+  color: var(--agro-gold-bright);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+body.homepage .hero-help__content span {
+  color: #8b938d;
+  font-size: 9.5px;
+  line-height: 1.4;
+}
+
+body.homepage .hero-help__content a {
+  width: fit-content;
+  color: var(--agro-gold-bright);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+
+body.homepage .hero-trust__copy {
+  margin: 0;
+  color: #d6c592;
+  font-size: 10.5px;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   DEMO LOTS
+   ========================================================= */
+
+body.homepage .homepage-demo-lots {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: var(--agro-gap);
+  border: 1px solid #232a25;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #0d110f, #080b09);
+  overflow: hidden;
+}
+
+body.homepage .homepage-demo-lots__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding-right: 26px;
+}
+
+body.homepage .homepage-lot {
+  min-width: 0;
+  min-height: 104px;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 14px;
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  border-right: 1px solid rgba(255, 255, 255, .05);
+}
+
+body.homepage .homepage-lot:last-child {
+  border-right: 0;
+}
+
+body.homepage .homepage-lot__image {
+  width: 58px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #333a35;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #22271f, #10130f);
+}
+body.homepage .homepage-lot__animal {
+  width: 58px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #333a35;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #22271f, #10130f);
+  color: var(--agro-gold-bright);
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: .08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+body.homepage .homepage-lot__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body.homepage .homepage-lot__image-placeholder {
+  color: #8c948e;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+body.homepage .homepage-lot__meta {
+  min-width: 0;
+}
+
+body.homepage .homepage-lot__id,
+body.homepage .homepage-lot__name,
+body.homepage .homepage-lot__volume {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+body.homepage .homepage-lot__id {
+  color: var(--agro-gold);
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: .03em;
+}
+
+body.homepage .homepage-lot__name {
+  margin-top: 5px;
+  color: #d3d8d4;
+  font-size: 9.5px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+body.homepage .homepage-lot__volume {
+  margin-top: 2px;
+  color: #b6bdb7;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+body.homepage .homepage-lot__status {
+  display: block;
+  margin-top: 6px;
+  color: #9aa19b;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+body.homepage .homepage-lot__status::before {
+  content: none;
+}
+
+body.homepage .homepage-lot__status b {
+  color: var(--agro-red);
+  font-weight: 800;
+}
+
+body.homepage .homepage-lot__status b::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: middle;
+}
+
+body.homepage .homepage-lot--blocked .homepage-lot__status b {
+  color: var(--agro-red);
+}
+
+body.homepage .homepage-lot__note {
+  margin-top: 4px;
+  color: #9aa19b;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: .02em;
+}
+
+body.homepage .homepage-lot__more {
+  align-self: center;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #a89149;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: color .16s ease;
+}
+
+body.homepage .homepage-lot__more:hover {
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .homepage-lot__arrow {
+  color: #af954e;
+  font-size: 15px;
+  line-height: 1;
+  text-align: right;
+}
+
+body.homepage .homepage-demo-lots__next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 26px;
+  height: 46px;
+  min-height: 46px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(90deg, rgba(13, 17, 15, 0), rgba(13, 17, 15, .96) 45%);
+  color: #9aa19b;
+  cursor: pointer;
+  transition: color .16s ease;
+}
+
+body.homepage .homepage-demo-lots__next:hover {
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .homepage-demo-lots__next svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================================
+   LEGAL STATUS
+   ========================================================= */
+
+body.homepage .homepage-legal {
+  position: relative;
+  width: min(var(--agro-shell), calc(100% - 28px));
+  margin: 0 auto 18px;
+  padding: 16px 20px;
+  border: 1px solid #232a25;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #0d110f, #080b09);
+  box-sizing: border-box;
+}
+
+body.homepage .homepage-legal__inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 132px;
+  column-gap: 18px;
+  align-items: center;
+}
+
+body.homepage .homepage-legal__icon {
+  width: 64px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  color: var(--agro-gold);
+  font-size: 0;
+  line-height: 1;
+}
+
+body.homepage .homepage-legal__icon svg {
+  width: 46px;
+  height: 46px;
+}
+
+body.homepage .homepage-legal__copy {
+  min-width: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 5px;
+  align-items: start;
+}
+
+body.homepage .homepage-legal__column {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+body.homepage .homepage-legal__copy p {
+  margin: 0;
+  color: #949b95;
+  font-size: 9px;
+  line-height: 1.62;
+}
+
+body.homepage .homepage-legal__copy strong {
+  color: var(--agro-gold);
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+body.homepage .homepage-legal__copy i {
+  color: var(--agro-gold-bright);
+  font-style: normal;
+}
+
+/* BRAND */
+
+body.homepage .homepage-legal__brand {
+  min-width: 0;
+  display: grid;
+  justify-items: end;
+  align-content: center;
+  gap: 4px;
+}
+
+body.homepage .homepage-legal__brand-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--agro-gold-bright);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+body.homepage .homepage-legal__brand-name img {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--agro-gold-soft);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body.homepage .homepage-legal__brand-copy,
+body.homepage .homepage-legal__copyright {
+  color: #868e88;
+  font-size: 8px;
+  line-height: 1.2;
+  letter-spacing: .06em;
+  text-align: right;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 1100px) and (max-width: 1359px) {
+
+  body.homepage {
+    --agro-terminal: 452px;
+    --agro-rail: 176px;
+  }
+
+  body.homepage .hero-b2b-principles-wrap {
+    grid-template-columns: minmax(0, 1fr) 190px;
+  }
+
+  body.homepage .ref-feature-grid {
+    width: 190px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+
+  body.homepage .hero__grid--reference {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "board"
+      "terminal";
+    gap: 12px;
+  }
+
+  body.homepage .hero__board {
+    grid-template-columns: 168px minmax(0, 1fr);
+  }
+
+  body.homepage .homepage-legal {
+    width: calc(100% - 24px);
+  }
+
+  body.homepage .homepage-legal__inner {
+    grid-template-columns: 48px minmax(0, 1fr) 112px;
+    column-gap: 12px;
+  }
+
+  body.homepage .homepage-demo-lots {
+    overflow-x: auto;
+  }
+
+  body.homepage .homepage-demo-lots__grid {
+    min-width: 900px;
+    grid-template-columns: repeat(5, minmax(178px, 1fr));
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  /* SHELL */
+
+  body.homepage .shell,
+  body.homepage .homepage-demo-lots,
+  body.homepage .homepage-legal {
+    width: calc(100% - 20px);
+  }
+
+  /* HEADER */
+
+  body.homepage .site-header__inner--home {
+    min-height: 54px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 4px 0 10px;
+  }
+
+  body.homepage .brand__logo {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  body.homepage .brand__name {
+    font-size: 20px;
+  }
+
+  body.homepage .brand-divider {
+    height: 26px;
+  }
+
+  body.homepage .brand__tag {
+    max-width: 150px;
+    font-size: 7.5px;
+    letter-spacing: .08em;
+  }
+
+  body.homepage .lang-switch button {
+    min-height: 24px;
+    padding: 3px 7px;
+    font-size: 9px;
+  }
+
+  /* HERO */
+
+  body.homepage .hero--homepage {
+    padding: 0 0 10px;
+  }
+
+  body.homepage .hero__grid--reference {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  body.homepage .hero__board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* RAIL */
+
+  body.homepage .ref-rail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    padding: 8px;
+    border-right: 0;
+    border-bottom: 1px solid #222925;
+  }
+
+  body.homepage .ref-rail__item {
+    padding: 9px 8px;
+    border-top: 1px solid rgba(255, 255, 255, .045);
+  }
+
+  body.homepage .ref-rail__item:nth-child(1),
+  body.homepage .ref-rail__item:nth-child(2) {
+    border-top: 0;
+  }
+
+  body.homepage .ref-rail__label,
+  body.homepage .ref-rail__value {
+    font-size: 8.5px;
+  }
+
+  body.homepage .ref-rail__art {
+    display: none;
+  }
+
+  /* CENTER */
+
+  body.homepage .hero__content--reference {
+    padding: 16px 14px 12px;
+  }
+
+  body.homepage .hero__content--reference::before {
+    display: none;
+  }
+
+  body.homepage .hero-b2b-title {
+  max-width: none;
+  font-size: clamp(18px, 5vw, 21px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -.005em;
+}
+  body.homepage .hero-b2b-formula {
+    max-width: none;
+    margin-top: 14px;
+    padding: 10px 12px 12px;
+  }
+
+  body.homepage .hero-b2b-formula-main {
+    font-size: 15px;
+  }
+
+  body.homepage .hero-b2b-principles-wrap {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  body.homepage .hero-b2b-principles ol {
+    font-size: 10px;
+  }
+
+  body.homepage .ref-feature-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  body.homepage .ref-feature__head,
+  body.homepage .ref-feature p {
+    font-size: 9.5px;
+  }
+
+  /* SYSTEMS */
+
+  body.homepage .hero-b2b-systems .sync-strip__flow--homepage {
+    flex-wrap: nowrap;
+    gap: 9px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.homepage .hero-b2b-systems .sync-strip__flow--homepage::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* TERMINAL */
+
+  body.homepage .hero__terminal {
+    padding: 15px;
+  }
+
+  body.homepage .hero__terminal .panel__head h2 {
+    font-size: 14px;
+  }
+
+  body.homepage .hero-access__cards,
+  body.homepage .hero-assist {
+    grid-template-columns: 1fr;
+  }
+
+  body.homepage .hero-access-card {
+    min-height: 0;
+  }
+
+  /* LOTS */
+
+  body.homepage .homepage-demo-lots {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  body.homepage .homepage-demo-lots__grid {
+    min-width: 820px;
+    grid-template-columns: repeat(5, minmax(164px, 1fr));
+    padding-right: 0;
+  }
+
+  body.homepage .homepage-demo-lots__next {
+    display: none;
+  }
+
+  /* LEGAL */
+
+  body.homepage .homepage-legal {
+    padding: 13px;
+  }
+
+  body.homepage .homepage-legal__inner {
+    grid-template-columns: 38px minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: start;
+  }
+
+  body.homepage .homepage-legal__icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  body.homepage .homepage-legal__icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  body.homepage .homepage-legal__copy {
+    grid-column: 2;
+    row-gap: 6px;
+  }
+
+  body.homepage .homepage-legal__copy p {
+    font-size: 8.5px;
+  }
+
+  body.homepage .homepage-legal__brand {
+    grid-column: 2;
+    justify-items: start;
+    margin-top: 10px;
+  }
+
+  body.homepage .homepage-legal__brand-copy,
+  body.homepage .homepage-legal__copyright {
+    text-align: left;
+  }
+
+  /* GENERAL */
+
+  body.homepage .lot-card__grid,
+  body.homepage .booking-summary__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.homepage .lot-actions {
+    flex-direction: column;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  body.homepage *,
+  body.homepage *::before,
+  body.homepage *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+
+}
+body.homepage .hero-access-card__content strong {
+  display: block;
+  min-height: 31px;
+  line-height: 1.3;
+}
+/* =========================================================
+   PUBLIC LOTS — CONFIDENTIALITY NOTICE
+   ========================================================= */
+
+body.homepage .homepage-demo-lots__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 0;
+  padding: 9px 12px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, .05);
+  background: rgba(10, 13, 11, .55);
+}
+
+body.homepage .homepage-demo-lots__notice-icon {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: var(--agro-gold);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+body.homepage .homepage-demo-lots__notice p {
+  margin: 0;
+  color: #7f8982;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .01em;
+}
+
+body.homepage .homepage-demo-lots__notice strong {
+  color: #b6a16b;
+  font-weight: 800;
+  letter-spacing: .05em;
+}
+
+@media (max-width: 767px) {
+  body.homepage .homepage-demo-lots__notice {
+    padding: 8px 10px;
+    gap: 7px;
+  }
+
+  body.homepage .homepage-demo-lots__notice p {
+    font-size: 7.5px;
+    line-height: 1.5;
+  }
+}
+body.homepage .homepage-lot__animal {
+  width: 58px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #333a35;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #22271f, #10130f);
+  color: #8b938d;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: .08em;
+  text-align: center;
+}
+/* =========================================================
+   HOMEPAGE LOTS — prevent text overflow
+   ========================================================= */
+
+body.homepage .homepage-lot {
+  min-width: 0;
+  overflow: hidden;
+}
+
+body.homepage .homepage-lot__meta {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+body.homepage .homepage-lot__id,
+body.homepage .homepage-lot__name,
+body.homepage .homepage-lot__volume,
+body.homepage .homepage-lot__status,
+body.homepage .homepage-lot__note {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.homepage .homepage-lot__status {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+body.homepage .homepage-lot__note {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+body.homepage .homepage-lot__more {
+  min-width: 14px;
+  flex: 0 0 14px;
+  z-index: 2;
+}
+body.homepage .homepage-legal__copyright {
+  display: grid;
+  gap: 6px;
+}
+
+body.homepage .homepage-legal__copyright a {
+  color: #868e88;
+  font-size: 8px;
+  line-height: 1.3;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: color .16s ease;
+}
+
+body.homepage .homepage-legal__copyright a:hover {
+  color: var(--agro-gold-bright);
+}
+
+body.homepage .homepage-legal__copyright span {
+  color: #686f69;
+  font-size: 8px;
+  line-height: 1.2;
+}
+/* =========================================================
+   AGROMAL — KY AS GEOMETRY BASELINE
+   Кыргызский язык определяет геометрию.
+   При RU / EN размеры элементов не меняются.
+   ========================================================= */
+
+body.homepage.ky-geometry-locked *,
+body.homepage.ky-geometry-locked *::before,
+body.homepage.ky-geometry-locked *::after {
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   BUTTONS
+   --------------------------------------------------------- */
+
+body.homepage.ky-geometry-locked button,
+body.homepage.ky-geometry-locked .button,
+body.homepage.ky-geometry-locked a.button {
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------
+   LANGUAGE SWITCH
+   --------------------------------------------------------- */
+
+body.homepage .lang-switch,
+body.homepage .lang-switch button {
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------
+   TEXT — НЕ ДАЁМ ТЕКСТУ РАСТЯГИВАТЬ КОНТЕЙНЕР
+   --------------------------------------------------------- */
+
+body.homepage .hero-access-card__content strong,
+body.homepage .hero-access-card__content small,
+body.homepage .hero-help__content strong,
+body.homepage .hero-help__content span,
+body.homepage .hero-trust__copy,
+body.homepage .ref-rail__label,
+body.homepage .ref-feature__head,
+body.homepage .ref-feature p,
+body.homepage .homepage-lot__id,
+body.homepage .homepage-lot__name,
+body.homepage .homepage-lot__volume,
+body.homepage .homepage-lot__status,
+body.homepage .homepage-lot__note {
+  min-width: 0;
+}
+/* =========================================================
+   AGROMAL — FIX TEXT BLOCK HEIGHTS BY KY BASELINE
+   Фиксируется высота текстовых областей.
+   Сам текст при переводе меняется.
+   ========================================================= */
+
+body.homepage .ref-rail__label,
+body.homepage .ref-feature__head,
+body.homepage .ref-feature p,
+body.homepage .hero-access-card__content strong,
+body.homepage .hero-access-card__content small,
+body.homepage .hero-help__content strong,
+body.homepage .hero-help__content span,
+body.homepage .hero-trust__copy,
+body.homepage .homepage-lot__id,
+body.homepage .homepage-lot__name,
+body.homepage .homepage-lot__volume,
+body.homepage .homepage-lot__status,
+body.homepage .homepage-lot__note {
+  overflow: hidden;
+}
+/* =========================================================
+   MOBILE HOMEPAGE LOTS — NORMAL MOBILE CARDS
+   Не меняет десктоп.
+   На телефоне текст читается, кнопка становится нормальной.
+   ========================================================= */
+
+/* =========================================================
+   MOBILE — NOTICE + LOTS = ONE HORIZONTAL SCROLL
+   Уведомление и лоты прокручиваются вместе
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  body.homepage .homepage-demo-lots {
+    width: calc(100% - 20px);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body.homepage .homepage-demo-lots::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* ---------------------------------------------------------
+     ВЕСЬ ВНУТРЕННИЙ БЛОК = ШИРОКАЯ ЛЕНТА
+     --------------------------------------------------------- */
+
+  body.homepage .homepage-demo-lots__notice,
+  body.homepage .homepage-demo-lots__grid {
+    width: max-content;
+    min-width: max-content;
+  }
+
+
+  /* ---------------------------------------------------------
+     NOTICE
+     Теперь он имеет ту же ширину,
+     что и вся лента лотов
+     --------------------------------------------------------- */
+
+  body.homepage .homepage-demo-lots__notice {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    width: 100%;
+    min-width: calc(285px * 5);
+
+    box-sizing: border-box;
+
+    padding: 8px 12px 9px;
+
+    white-space: normal;
+  }
+
+  body.homepage .homepage-demo-lots__notice-icon {
+    flex: 0 0 auto;
+  }
+
+  body.homepage .homepage-demo-lots__notice p {
+    flex: 0 0 auto;
+
+    width: calc((285px * 5) - 40px);
+
+    max-width: none;
+
+    margin: 0;
+
+    white-space: normal;
+
+    font-size: 7.5px;
+    line-height: 1.5;
+  }
+
+
+  /* ---------------------------------------------------------
+     LOTS
+     --------------------------------------------------------- */
+
+  body.homepage .homepage-demo-lots__grid {
+
+    display: grid;
+
+    width: max-content;
+    min-width: max-content;
+
+    grid-template-columns:
+      repeat(5, 285px);
+
+    padding-right: 0;
+  }
+
+
+  body.homepage .homepage-lot {
+
+    width: 285px;
+    min-width: 285px;
+    max-width: 285px;
+
+    min-height: 150px;
+
+    display: grid;
+
+   grid-template-columns: 58px minmax(0, 1fr);
+
+    gap: 10px;
+
+    align-items: start;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+
+  body.homepage .homepage-lot__animal {
+    width: 58px;
+    min-width: 58px;
+    height: 52px;
+  }
+
+
+  body.homepage .homepage-lot__meta {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  body.homepage .homepage-lot__id,
+  body.homepage .homepage-lot__name,
+  body.homepage .homepage-lot__volume,
+  body.homepage .homepage-lot__status,
+  body.homepage .homepage-lot__note {
+
+    white-space: normal;
+
+    overflow: hidden;
+
+    text-overflow: clip;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+
+  body.homepage .homepage-lot__id {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    line-height: 1.3;
+  }
+
+
+  body.homepage .homepage-lot__name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+    line-height: 1.35;
+  }
+
+
+  body.homepage .homepage-lot__volume {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    line-height: 1.35;
+  }
+
+
+  body.homepage .homepage-lot__status {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    line-height: 1.35;
+  }
+
+
+  body.homepage .homepage-lot__note {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    line-height: 1.35;
+  }
+
+
+  /* ---------------------------------------------------------
+     КНОПКА ЛОТА
+     --------------------------------------------------------- */
+
+  body.homepage .homepage-lot__more {
+
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+
+    height: 52px;
+    min-height: 52px;
+    max-height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 1;
+
+    border: 1px solid rgba(184, 154, 85, .28);
+    border-radius: 5px;
+
+    background: rgba(184, 154, 85, .05);
+  }
+
+
+  /* Внутренняя стрелка не нужна */
+  body.homepage .homepage-demo-lots__next {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+
+  body.homepage .homepage-demo-lots {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.homepage .homepage-demo-lots::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.homepage .homepage-demo-lots__track {
+    width: max-content;
+    min-width: max-content;
+    display: block;
+  }
+
+  body.homepage .homepage-demo-lots__notice {
+    width: 1465px;
+    min-width: 1465px;
+  }
+
+  body.homepage .homepage-demo-lots__notice p {
+    width: 1400px;
+    max-width: none;
+  }
+
+  body.homepage .homepage-demo-lots__grid {
+    width: max-content;
+    min-width: max-content;
+    grid-template-columns: repeat(5, 285px);
+  }
+}
+body.homepage .homepage-lot__more {
+  display: none !important;
+}
+/* =========================================================
+   FEATURE TITLES — FORCE ONE LINE
+   ========================================================= */
+
+body.homepage .ref-feature__head {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+body.homepage .ref-feature__head > span:first-child {
+ flex: 0 0 17px;
+  width: 17px;
+  min-width: 17px;
+  max-width: 17px;
+  height: 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+  line-height: 1;
+  color: #9a9e9c;
+  flex-shrink: 0;
+}
+body.homepage .ref-feature__head {
+  gap: 8px;
+}
+body.homepage .ref-feature__head > span:last-child {
+  flex: 1 1 auto;
+  width: auto !important;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  display: block;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: clip;
+  line-height: 1.2;
+}
+/* =========================================================
+   BRAND TAG — KYRGYZ FLAG
+   ========================================================= */
+
+body.homepage .brand__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+body.homepage .brand__flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 10px;
+
+  flex: 0 0 16px;
+}
+
+body.homepage .brand__flag svg {
+  display: block;
+  width: 16px;
+  height: 10px;
+  max-width: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  body.homepage .brand__flag {
+    width: 14px;
+    height: 9px;
+    flex-basis: 14px;
+  }
+
+  body.homepage .brand__flag svg {
+    width: 14px;
+    height: 9px;
+  }
+}
+/* =========================================================
+   DEMO LOTS — TEXT SIZE
+   ========================================================= */
+
+body.homepage .homepage-lot__animal {
+  font-size: 6px;
+  line-height: 1.15;
+  letter-spacing: .04em;
+  text-align: center;
+  white-space: normal;
+  overflow: hidden;
+  word-break: normal;
+}
+/* =========================================================
+   MOBILE HEADER — TAG РЯДОМ С AGROMAL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  body.homepage .site-header__inner--home {
+    display: grid !important;
+
+    grid-template-columns:
+      auto
+      auto
+      minmax(0, 1fr)
+      auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: calc(100% - 20px);
+    min-height: 54px;
+
+    padding: 4px 0 10px;
+
+    flex-wrap: nowrap !important;
+  }
+
+  /* AGROMAL */
+  body.homepage .brand--home {
+    min-width: max-content;
+    width: auto;
+    flex: none;
+  }
+
+  body.homepage .brand__name {
+    white-space: nowrap !important;
+  }
+
+  /* РАЗДЕЛИТЕЛЬ */
+  body.homepage .brand-divider {
+    width: 1px;
+    min-width: 1px;
+    height: 24px;
+    flex: none;
+  }
+
+  /* TAG */
+  body.homepage .brand__tag {
+    display: block !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+
+    font-size: 7px !important;
+    line-height: 1.2 !important;
+    letter-spacing: .045em !important;
+  }
+
+  /* ФЛАГ */
+  body.homepage .brand__flag {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 9px;
+  }
+
+  body.homepage .brand__flag svg {
+    width: 14px;
+    height: 9px;
+  }
+
+  /* ЯЗЫКИ */
+  body.homepage .lang-switch--compact {
+    min-width: max-content;
+    width: auto;
+    margin-left: 0 !important;
+    flex: none;
+  }
+
+  body.homepage .lang-switch button {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+/* =========================================================
+   MOBILE DEMO LOTS — SCROLL LEFT + RIGHT
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  body.homepage .homepage-demo-lots {
+    width: calc(100% - 20px);
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    touch-action: pan-x;
+  }
+
+  body.homepage .homepage-demo-lots::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.homepage .homepage-demo-lots__track {
+    display: block !important;
+    width: max-content !important;
+    min-width: max-content !important;
+  }
+
+  /*
+   * Реальный запас слева.
+   * Благодаря ему можно двигать содержимое вправо
+   * от первоначальной позиции.
+   */
+  body.homepage .homepage-demo-lots__track::before {
+    content: "";
+    display: block;
+    width: 285px;
+    height: 1px;
+  }
+
+  /*
+   * Запас справа.
+   */
+  body.homepage .homepage-demo-lots__track::after {
+    content: "";
+    display: block;
+    width: 285px;
+    height: 1px;
+  }
+
+  body.homepage .homepage-demo-lots__notice {
+    width: 1465px !important;
+    min-width: 1465px !important;
+    max-width: none !important;
+  }
+
+  body.homepage .homepage-demo-lots__grid {
+    width: max-content !important;
+    min-width: max-content !important;
+    grid-template-columns: repeat(5, 285px) !important;
+    padding-right: 0 !important;
+  }
+}
+/* =========================================================
+   HOMEPAGE — REMOVE GOLD FROM SUPPORT / TRUST / LEGAL
+   ========================================================= */
+
+body.homepage .hero-help__content strong,
+body.homepage .hero-help__content a,
+body.homepage .hero-trust__copy,
+body.homepage .hero-help__icon,
+body.homepage .hero-help__icon svg,
+body.homepage .hero-trust__icon,
+body.homepage .hero-trust__icon svg,
+body.homepage .homepage-legal__icon,
+body.homepage .homepage-legal__copy strong,
+body.homepage .homepage-legal__copy i,
+body.homepage .homepage-legal__brand-name {
+  color: #9aa19b !important;
+}
+/* DEMO LOTS — LOT ID GRAY */
+body.homepage .homepage-lot__id {
+  color: #9aa19b !important;
+}

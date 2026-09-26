@@ -1,0 +1,570 @@
+/* =========================================================
+   AGROMAL — LIGHT THEME (dashboard / admin / privacy)
+
+   Подключается ПОСЛЕ main.css (+ admin.css).
+   Не трогает index.html — главная использует
+   встроенный <style> + agromal-home-preview.css.
+
+   Палитра — та же, что на главной:
+   --paper:#FFFFFF, --porcelain:#F7F6F3, --ink:#0B0B0C,
+   --line:#E4E1DA, --muted:#6E6A62, --accent:#15402F.
+   ========================================================= */
+
+:root {
+  color-scheme: light;
+  --accent-bright: #15402F;
+  --muted: #6E6A62;
+}
+
+/* ---------- БАЗА ---------- */
+body {
+  background: #FFFFFF !important;
+  color: #0B0B0C !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", system-ui, sans-serif;
+  padding-bottom: 0 !important;
+}
+
+body::before,
+body::after { display: none !important; }
+
+h1, h2, h3, h4 { color: #0B0B0C !important; }
+p, span, li, td, th { color: #26262A; }
+.muted, .micro { color: #6E6A62 !important; }
+::selection { background: #15402F; color: #FFFFFF; }
+:focus-visible { outline: 2px solid #15402F; outline-offset: 2px; }
+
+/* ---------- ШЕЛЛ / СЕКЦИИ ---------- */
+.shell { background: transparent !important; }
+.app-main { background: #FFFFFF; }
+
+/* ---------- ШАПКА ---------- */
+.site-header {
+  background: rgba(255, 255, 255, .92) !important;
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid #E4E1DA !important;
+}
+.site-header__inner { border: 0 !important; }
+.brand__name { color: #0B0B0C !important; }
+.brand__tag { color: #6E6A62 !important; }
+.brand__logo { filter: none; }
+
+/* ---------- ФУТЕР ---------- */
+.site-footer {
+  background: #F7F6F3 !important;
+  border-top: 1px solid #E4E1DA !important;
+  color: #26262A !important;
+}
+.footer__inner,
+.site-footer span,
+.site-footer a { color: #26262A !important; }
+
+/* ---------- КАРТОЧКИ / ПАНЕЛИ ---------- */
+.card,
+.admin-lots-card,
+.admin-lots-panel,
+.admin-table-wrap,
+.table-wrap,
+.split,
+.stack,
+.user-meta,
+.app-title,
+.modal__title-block,
+.card__title,
+.admin-card-title {
+  background: #FFFFFF !important;
+  border-color: #E4E1DA !important;
+  color: #0B0B0C !important;
+}
+
+/* ---------- ПОЛЯ ВВОДА ---------- */
+.field label,
+.field__hint { color: #6E6A62 !important; }
+
+.field input,
+.field select,
+.field textarea,
+.lots-filters input,
+.lots-filters select {
+  background: #FFFFFF !important;
+  color: #0B0B0C !important;
+  border-color: #0B0B0C !important;
+  border-radius: 5px !important;
+}
+
+.field input::placeholder,
+.field textarea::placeholder { color: #9A958C !important; }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.lots-filters input:focus,
+.lots-filters select:focus {
+  border-color: #15402F !important;
+  box-shadow: 0 0 0 3px rgba(21, 64, 47, .14) !important;
+  outline: 0 !important;
+}
+
+.field--disabled input,
+.field--disabled select,
+.admin-field--disabled input,
+input[readonly] {
+  background: #F7F6F3 !important;
+  color: #6E6A62 !important;
+}
+
+/* ---------- КНОПКИ (как .btn на главной) ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 0 !important;
+  border: 1px solid #0B0B0C !important;
+  background: #FFFFFF !important;
+  color: #0B0B0C !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  transition: background .16s, color .16s, border-color .16s, transform .1s !important;
+}
+.button:hover { background: #0B0B0C !important; color: #FFFFFF !important; }
+.button:active { transform: translateY(1px) !important; }
+
+.button--ghost {
+  border-color: #E4E1DA !important;
+  background: transparent !important;
+  color: #0B0B0C !important;
+}
+.button--ghost:hover {
+  background: #0B0B0C !important;
+  border-color: #0B0B0C !important;
+  color: #FFFFFF !important;
+}
+
+/* акцентная — зелёный, как btn--accent */
+#booking-submit,
+#lot-submit,
+.button--accent,
+.login-submit {
+  background: #15402F !important;
+  border-color: #15402F !important;
+  color: #FFFFFF !important;
+}
+#booking-submit:hover,
+#lot-submit:hover,
+.button--accent:hover,
+.login-submit:hover {
+  background: #0E2C20 !important;
+  border-color: #0E2C20 !important;
+  color: #FFFFFF !important;
+}
+
+.button--danger {
+  border-color: #B4A6A6 !important;
+  background: transparent !important;
+  color: #8E3B3B !important;
+}
+.button--danger:hover {
+  background: #8E3B3B !important;
+  border-color: #8E3B3B !important;
+  color: #FFFFFF !important;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] { opacity: .42; }
+
+/* ---------- ТАБЛИЦЫ ---------- */
+table, .admin-table { color: #26262A; }
+.admin-table thead th {
+  background: #F7F6F3 !important;
+  color: #0B0B0C !important;
+  border-color: #E4E1DA !important;
+}
+.admin-table td,
+.admin-table tbody tr { border-color: #E4E1DA !important; }
+.admin-table tbody tr:nth-child(even) { background: #FBFAF8 !important; }
+.admin-table td::before { color: #6E6A62 !important; }
+.admin-lots-scroll thead th { background: #F7F6F3 !important; }
+
+/* ---------- ФИЛЬТРЫ ЛОТОВ ---------- */
+.lots-filters {
+  background: #F7F6F3 !important;
+  border: 1px solid #E4E1DA !important;
+  border-radius: 6px;
+}
+.lots-filters .field label { color: #6E6A62 !important; }
+
+/* ---------- УВЕДОМЛЕНИЯ ---------- */
+.notice {
+  border-color: #E4E1DA !important;
+  background: #F7F6F3 !important;
+  color: #6E6A62 !important;
+}
+.notice--loading { color: #6E6A62 !important; }
+.notice--error {
+  border-color: #E3BDBD !important;
+  background: rgba(142, 59, 59, .08) !important;
+  color: #8E3B3B !important;
+}
+.notice--success {
+  border-color: #A8C4B2 !important;
+  background: rgba(21, 64, 47, .08) !important;
+  color: #15402F !important;
+}
+
+/* ---------- МОДАЛКА ---------- */
+.modal__backdrop { background: rgba(11, 11, 12, .45) !important; }
+.modal__dialog {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E1DA !important;
+  color: #0B0B0C !important;
+}
+.modal__close { color: #6E6A62 !important; }
+.modal__close:hover { background: #F7F6F3 !important; color: #0B0B0C !important; }
+
+/* ---------- КАРТОЧКИ ЛОТОВ ---------- */
+.desktop-lots,
+.mobile-lots,
+#desktop-lots-list > *,
+#lot-cards > * {
+  color: #0B0B0C;
+}
+.desktop-lots .lot-card,
+.mobile-lots .lot-card,
+#desktop-lots-list > *,
+#lot-cards > * {
+  background: #FFFFFF !important;
+  border-color: #E4E1DA !important;
+}
+
+/* ---------- DESKTOP-КАРТОЧКА ЛОТА ----------
+   Свои стили: в main.css этого блока не существует,
+   карточки рендерились без оформления. */
+#desktop-lots-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.desktop-lot {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  grid-template-areas: "media main" "media side" "actions actions";
+  gap: 6px 18px;
+  align-items: stretch;
+  border: 1px solid #E4E1DA !important;
+  border-radius: 12px !important;
+  background: #FFFFFF !important;
+  padding: 16px 18px;
+  box-shadow: 0 1px 2px rgba(11, 11, 12, .04);
+  transition: border-color .16s, box-shadow .16s, transform .16s;
+}
+.desktop-lot:hover {
+  border-color: #0B0B0C !important;
+  box-shadow: 0 6px 18px rgba(11, 11, 12, .08);
+  transform: translateY(-2px);
+}
+
+/* МЕДИА (фото) */
+.desktop-lot__media { grid-area: media; }
+.desktop-lot__image {
+  width: 132px;
+  height: 132px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #F7F6F3;
+  border: 1px solid #E4E1DA;
+  display: grid;
+  place-items: center;
+}
+.desktop-lot__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.desktop-lot__image-product {
+  color: #6E6A62;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px;
+  line-height: 1.3;
+}
+
+/* ОСНОВНАЯ ЧАСТЬ */
+.desktop-lot__main { grid-area: main; min-width: 0; }
+.desktop-lot__top { margin-bottom: 8px; }
+.desktop-lot__id {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #6E6A62;
+}
+.desktop-lot__title {
+  margin: 5px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  color: #0B0B0C;
+}
+.desktop-lot__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  font-size: 12px;
+  color: #26262A;
+}
+.desktop-lot__details span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.desktop-lot__details span + span::before {
+  content: "·";
+  color: #C9C4BA;
+}
+
+/* ПРАВАЯ ЧАСТЬ: цена + статус + действия */
+.desktop-lot__side {
+  grid-area: side;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.desktop-lot__price-wrap { text-align: right; }
+.desktop-lot__price {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: #15402F;
+  white-space: nowrap;
+}
+.desktop-lot__price-note {
+  margin-top: 2px;
+  font-size: 10.5px;
+  color: #6E6A62;
+}
+.desktop-lot__actions {
+  grid-area: actions;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  padding-top: 10px;
+  border-top: 1px solid #EFEDE7;
+  margin-top: 6px;
+}
+
+/* Кнопки в карточках: центрируем и даём им сжиматься,
+   чтобы фиксированная ширина из main.css (230px / 110px)
+   не вылезала за край карточки. */
+.desktop-lot__actions .button,
+.desktop-lot__actions a {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  flex: 1 1 160px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+}
+
+/* ---------- МОБАЙЛ-КАРТОЧКА ЛОТА ---------- */
+.mobile-lots { display: none; }
+@media (max-width: 860px) {
+  .mobile-lots {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+  }
+  #desktop-lots-list { display: none; }
+}
+
+.lot-card {
+  border: 1px solid #E4E1DA !important;
+  border-radius: 12px !important;
+  background: #FFFFFF !important;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(11, 11, 12, .04);
+  transition: border-color .16s, box-shadow .16s;
+}
+.lot-card:hover {
+  border-color: #C9C4BA !important;
+  box-shadow: 0 4px 14px rgba(11, 11, 12, .07);
+}
+
+.lot-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.lot-card .lot-number {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #6E6A62;
+}
+.lot-card__title {
+  margin: 6px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  color: #0B0B0C;
+}
+
+/* ФОТО В МОБАЙЛ-КАРТОЧКЕ */
+.lot-card__media { margin: 0 0 14px; }
+.lot-card__media-placeholder {
+  position: relative;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #E4E1DA;
+  background: #F7F6F3;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  text-align: center;
+  padding: 14px;
+  overflow: hidden;
+}
+.lot-card__media-placeholder strong {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #26262A;
+}
+.lot-card__media-placeholder span {
+  font-size: 11px;
+  color: #6E6A62;
+  line-height: 1.4;
+}
+.lot-card__media-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lot-card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Кнопки в мобайл-карточке: main.css ставит их в столбец
+   и прижимает влево — центрируем в один/два ряда. */
+.lot-card .lot-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+.lot-card .lot-actions .button,
+.lot-card .lot-actions a {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  flex: 1 1 140px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+}
+.data-pair span {
+  display: block;
+  color: #6E6A62;
+  font-size: 9.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.data-pair strong {
+  display: block;
+  margin-top: 3px;
+  color: #0B0B0C;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* DEMO-метка */
+.demo-tag {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(201, 162, 39, .16);
+  color: #8A6D14;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+/* ---------- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА ---------- */
+.lang-switch button {
+  color: #6E6A62 !important;
+  border-color: #E4E1DA !important;
+  background: transparent !important;
+}
+.lang-switch button[aria-pressed="true"],
+.lang-switch button.active,
+.lang-switch button.is-active {
+  background: #F1EEE6 !important;
+  color: #0B0B0C !important;
+  border-color: #0B0B0C !important;
+}
+/* ---------- АДМИН: превью картинки ---------- */
+.lot-image-preview {
+  background: #F7F6F3 !important;
+  border-color: #E4E1DA !important;
+}
+
+/* ---------- ПРИВАСИ: legal-страница ---------- */
+main h1, main h2, main h3 { color: #0B0B0C !important; }
+main a { color: #15402F !important; }
+main a:hover { text-decoration: underline; }
+main ul li::before { color: #15402F !important; }
+
+/* ---------- СКРОЛЛБАР (тёмный был) ---------- */
+.admin-lots-scroll::-webkit-scrollbar-thumb { background: #C9C4BA !important; }
+.admin-lots-scroll::-webkit-scrollbar-thumb:hover { background: #15402F !important; }
+
+/* ---------- КНОПКИ В КАРТОЧКАХ: по центру ---------- */
+/* main.css прижимает их влево (align-items:flex-start) —
+   центрируем, не трогая остальное. Основное правило для
+   десктопа живёт в .desktop-lot__actions выше. */
+.lot-actions {
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: center !important;
+  width: 100% !important;
+}
+
+/* ---------- МОБАЙЛ ---------- */
+@media (max-width: 760px) {
+  .admin-table tr {
+    background: #FFFFFF !important;
+    border-color: #E4E1DA !important;
+  }
+  .admin-table-wrap { background: transparent !important; }
+}

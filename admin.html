@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+
+  <title>Управление платформой — AGROMAL</title>
+
+  <meta name="theme-color" content="#FFFFFF">
+
+  <link rel="icon" href="./assets/img/logo.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/agromal-light-theme.css">
+  <link rel="stylesheet" href="./assets/css/admin.css">
+
+  <script src="./assets/js/config.js"></script>
+  <script type="module" src="./assets/js/admin.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="shell site-header__inner">
+
+      <a class="brand" href="./dashboard.html">
+        <img
+          class="brand__logo"
+          src="./assets/img/logo.jfif"
+          alt=""
+        >
+
+        <span class="brand__copy">
+          <b class="brand__name">AGROMAL.kg</b>
+
+          <small
+            class="brand__tag"
+            data-i18n="taglineAfter"
+          ></small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+
+        <a
+          class="button button--ghost button--small"
+          href="./dashboard.html"
+          data-i18n="lots"
+        ></a>
+
+        <nav
+          class="lang-switch"
+          aria-label="Язык интерфейса"
+        >
+          <button
+            type="button"
+            data-lang="ky"
+          >
+            КГ
+          </button>
+
+          <button
+            type="button"
+            data-lang="ru"
+          >
+            РУС
+          </button>
+
+          <button
+            type="button"
+            data-lang="en"
+          >
+            ENG
+          </button>
+        </nav>
+
+        <button
+          class="button button--ghost button--small"
+          type="button"
+          data-logout
+          data-i18n="logout"
+        ></button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- MAIN -->
+  <main class="app-main">
+
+    <div class="shell">
+
+      <!-- PAGE TITLE -->
+      <div class="app-title">
+
+        <div>
+          <span
+            class="micro"
+            data-i18n="admin"
+          ></span>
+
+          <h1 data-i18n="adminTitle"></h1>
+
+          <p data-i18n="adminIntro"></p>
+        </div>
+
+        <div
+          class="user-meta"
+          id="user-meta"
+        ></div>
+
+      </div>
+
+
+      <!-- NOTICE -->
+      <div
+        id="admin-notice"
+        class="notice"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+
+
+      <div class="stack">
+
+
+        <!-- =====================================================
+             LOTS
+             ===================================================== -->
+
+        <section
+          class="split admin-section"
+          aria-labelledby="lot-form-title"
+        >
+
+          <!-- CREATE LOT -->
+          <form
+            class="card"
+            id="lot-form"
+          >
+
+            <div class="card__title admin-card-title">
+
+              <h2
+                id="lot-form-title"
+                data-i18n="createLot"
+              ></h2>
+
+            </div>
+
+            <input
+              type="hidden"
+              id="lot-id"
+            >
+
+
+            <div class="field">
+
+              <label
+                for="lot-number"
+                data-i18n="lotNumber"
+              ></label>
+
+              <input
+                id="lot-number"
+                maxlength="30"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label
+                for="animal-type"
+                data-i18n="animalType"
+              ></label>
+
+              <select
+                id="animal-type"
+                required
+              >
+
+                <option
+                  value=""
+                  data-i18n="select"
+                ></option>
+
+                <option
+                  value="cattle"
+                  data-i18n="cattle"
+                ></option>
+
+                <option
+                  value="sheep"
+                  data-i18n="sheep"
+                ></option>
+
+                <option
+                  value="horse"
+                  data-i18n="horse"
+                ></option>
+
+                <option
+                  value="yak"
+                  data-i18n="yak"
+                ></option>
+
+                <option
+                  value="selection"
+                  data-i18n="selection"
+                ></option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field field--full">
+
+              <label
+                for="breed"
+                data-i18n="lotTitleField"
+              ></label>
+
+              <input
+                id="breed"
+                maxlength="160"
+                required
+              >
+
+            </div>
+
+            <div class="field field--full">
+
+  <label
+    for="lot-image"
+    data-i18n="lotImage"
+  ></label>
+
+  <input
+    id="lot-image"
+    type="file"
+    accept="image/jpeg,image/png,image/webp"
+  >
+
+  <small
+    class="field__hint"
+    data-i18n="lotImageHint"
+  ></small>
+
+  <div
+    id="lot-image-preview"
+    class="lot-image-preview"
+    hidden
+  ></div>
+
+</div>
+
+            <div class="field">
+
+  <label
+    for="region"
+    data-i18n="region"
+  ></label>
+
+  <select id="region" required>
+
+    <option
+      value=""
+      data-i18n="select"
+    ></option>
+
+    <option
+      value="batken"
+      data-i18n="regionBatken"
+    ></option>
+
+    <option
+      value="jalal_abad"
+      data-i18n="regionJalalAbad"
+    ></option>
+
+    <option
+      value="issyk_kul"
+      data-i18n="regionIssykKul"
+    ></option>
+
+    <option
+      value="naryn"
+      data-i18n="regionNaryn"
+    ></option>
+
+    <option
+      value="osh"
+      data-i18n="regionOsh"
+    ></option>
+
+    <option
+      value="talas"
+      data-i18n="regionTalas"
+    ></option>
+
+    <option
+      value="chuy"
+      data-i18n="regionChuy"
+    ></option>
+
+  </select>
+
+</div>
+
+
+            <div class="field">
+
+              <label
+                for="quantity"
+                data-i18n="quantity"
+              ></label>
+
+              <input
+                id="quantity"
+                type="number"
+                min="1"
+                max="100000"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label
+                for="price"
+                data-i18n="price"
+              ></label>
+
+              <input
+                id="price"
+                type="number"
+                min="1"
+                max="100000000"
+                step="0.01"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+  <label
+    for="price-unit"
+    data-i18n="priceUnit"
+  ></label>
+
+  <select id="price-unit" required>
+
+    <option
+      value=""
+      data-i18n="select"
+    ></option>
+
+    <option
+      value="KGS"
+      data-i18n="currencyKgs"
+    ></option>
+
+    <option
+      value="KZT"
+      data-i18n="currencyKzt"
+    ></option>
+
+    <option
+      value="RUB"
+      data-i18n="currencyRub"
+    ></option>
+
+    <option
+      value="EUR"
+      data-i18n="currencyEur"
+    ></option>
+
+    <option
+      value="USD"
+      data-i18n="currencyUsd"
+    ></option>
+
+  </select>
+
+</div>
+
+
+            <div class="field field--full">
+
+              <label
+                for="lot-status"
+                data-i18n="status"
+              ></label>
+
+              <select id="lot-status">
+
+                <option
+                  value="available"
+                  data-i18n="available"
+                ></option>
+
+                <option
+                  value="reserved"
+                  data-i18n="reserved"
+                ></option>
+
+                <option
+                  value="sold"
+                  data-i18n="sold"
+                ></option>
+
+                <option
+                  value="closed"
+                  data-i18n="closed"
+                ></option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field field--full">
+
+              <label
+                for="status-note"
+                data-i18n="statusNote"
+              ></label>
+
+              <input
+                id="status-note"
+                maxlength="200"
+              >
+
+            </div>
+
+
+            <!-- ОСТАВЛЯЕМ ЭЛЕМЕНТ В DOM, НО ПОЛЬЗОВАТЕЛЬ ЕГО НЕ ВИДИТ -->
+            <div class="field field--full admin-field--disabled">
+
+              <label
+                for="action-note"
+                data-i18n="actionNote"
+              ></label>
+
+              <input
+                id="action-note"
+                maxlength="200"
+                disabled
+                aria-disabled="true"
+              >
+
+            </div>
+
+
+            <div class="button-row">
+
+              <button
+                class="button"
+                type="submit"
+                id="lot-submit"
+                data-i18n="createLot"
+              ></button>
+
+              <button
+                class="button button--ghost"
+                type="button"
+                id="lot-cancel"
+                data-i18n="cancel"
+                hidden
+              ></button>
+
+            </div>
+
+          </form>
+
+
+          <!-- LOTS TABLE -->
+         <!-- LOTS TABLE -->
+<div class="admin-lots-panel">
+
+  <div class="admin-lots-card">
+
+    <div class="admin-lots-card__head">
+      <h2 data-i18n="lots"></h2>
+    </div>
+
+    <div class="table-wrap admin-table-wrap admin-lots-scroll">
+
+      <table class="admin-table">
+
+        <thead>
+          <tr>
+            <th data-i18n="lotId"></th>
+            <th data-i18n="product"></th>
+            <th data-i18n="priceColumn"></th>
+            <th data-i18n="status"></th>
+            <th data-i18n="action"></th>
+          </tr>
+        </thead>
+
+        <tbody id="admin-lots"></tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+        </section>
+
+
+        <!-- =====================================================
+             USERS / ORGANIZATIONS
+             ===================================================== -->
+
+        <section
+          class="split admin-section"
+          aria-labelledby="user-form-title"
+        >
+
+          <!-- CREATE USER -->
+          <form
+            class="card"
+            id="user-form"
+          >
+
+            <div class="card__title">
+
+              <h2
+                id="user-form-title"
+                data-i18n="createUser"
+              ></h2>
+
+            </div>
+
+
+            <div class="field">
+
+              <label
+                for="company"
+                data-i18n="company"
+              ></label>
+
+              <input
+                id="company"
+                maxlength="160"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label
+                for="inn"
+                data-i18n="inn"
+              ></label>
+
+              <input
+                id="inn"
+                inputmode="numeric"
+                minlength="8"
+                maxlength="14"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label
+                for="full-name"
+                data-i18n="fullName"
+              ></label>
+
+              <input
+                id="full-name"
+                maxlength="160"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label
+                for="user-role"
+                data-i18n="role"
+              ></label>
+
+              <select id="user-role">
+
+                <option
+                  value="buyer"
+                  data-i18n="buyer"
+                ></option>
+
+                <option
+                  value="admin"
+                  data-i18n="adminRole"
+                ></option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field">
+
+              <label
+                for="temp-password"
+                data-i18n="tempPassword"
+              ></label>
+
+              <input
+                id="temp-password"
+                type="password"
+                minlength="12"
+                maxlength="128"
+                autocomplete="new-password"
+                required
+              >
+
+            </div>
+
+
+            <p
+              class="notice"
+              data-i18n="userHint"
+            ></p>
+
+
+            <button
+              class="button button--wide"
+              type="submit"
+              data-i18n="createUser"
+            ></button>
+
+          </form>
+
+
+          <!-- ORGANIZATIONS TABLE -->
+          <div>
+
+            <div class="toolbar">
+
+              <h2 data-i18n="organizations"></h2>
+
+            </div>
+
+
+            <div class="table-wrap admin-table-wrap">
+
+              <table class="admin-table">
+
+                <thead>
+
+                  <tr>
+
+                    <th data-i18n="company"></th>
+
+                    <th data-i18n="inn"></th>
+
+                    <th data-i18n="emailLogin"></th>
+
+                    <th data-i18n="orgStatus"></th>
+
+                    <th data-i18n="role"></th>
+
+                    <th data-i18n="action"></th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody id="organizations-body"></tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="shell footer__inner">
+
+      <span>
+        © 2026 ТОРГОВЫЙ ДОМ AGROMAL
+      </span>
+
+      <span data-i18n="footerDocs"></span>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
