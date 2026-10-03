@@ -1,16 +1,16 @@
-import { redirectForAccess, requireAccess } from "./auth.js";
+import { redirectForAccess, requireAccess } from "./auth.js?v=20261003c";
 import {
   create,
   formatNumber,
   initCommon,
   setState,
   setWhatsappLink
-} from "./common.js";
+} from "./common.js?v=20261003c";
 import {
   db,
   createLotImageSignedUrl
-} from "./supabase.js";
-import { language, t } from "./i18n.js";
+} from "./supabase.js?v=20261003c";
+import { language, t } from "./i18n.js?v=20261003c";
 
 initCommon();
 

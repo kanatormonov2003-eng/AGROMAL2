@@ -1,5 +1,5 @@
-import { initI18n, language, t } from "./i18n.js";
-import { signOut } from "./supabase.js";
+import { initI18n, language, t } from "./i18n.js?v=20261003c";
+import { signOut } from "./supabase.js?v=20261003c";
 
 export function initCommon() {
   initI18n();

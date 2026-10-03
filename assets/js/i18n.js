@@ -86,19 +86,6 @@ lotImageRemove:
       "НАДЁЖНОСТЬ",
 
     /* =====================================================
-       HERO
-       ===================================================== */
-
-    heroLabel:
-      "ЗАКРЫТАЯ ЦИФРОВАЯ ИНФОРМАЦИОННО-ТОРГОВАЯ ПЛАТФОРМА",
-
-    heroTitle:
-      "Цифровая инфраструктура для оптовых закупок животноводческой продукции.",
-
-    heroText:
-      "превращает предложение фермера в проверенный оптовый лот с идентификацией, ветеринарной проверкой и фото-видеофиксацией — и напрямую соединяет его с профессиональным покупателем.",
-
-    /* =====================================================
        FORMULA / PRINCIPLES
        ===================================================== */
 
@@ -126,11 +113,7 @@ talas:
 
 chuy:
   "Чуйская область",
-    formulaMain:
-      "ОДИН ЛОТ. ОДНА ЦЕНА. ОДНА СДЕЛКА.",
 
-    formulaNote:
-      "Без базара. Без лишних посредников. Без покупки скота на свой баланс.",
 
     principlesTitle:
       "ПРИНЦИП РАБОТЫ ПЛАТФОРМЫ",
@@ -271,6 +254,12 @@ currencyUsd: "Доллар",
     passwordShort:
       "Пароль должен содержать не менее 12 символов.",
 
+    consentPrefix:
+      "Ознакомился(ась) с",
+
+    consentRequired:
+      "Необходимо подтвердить ознакомление с Политикой конфиденциальности.",
+
     /* =====================================================
        ACCESS
        ===================================================== */
@@ -350,8 +339,6 @@ currencyUsd: "Доллар",
     footerLegalText1: "AGROMAL — независимая информационно-техническая B2B-платформа для взаимодействия Поставщиков и Закупщиков сельскохозяйственных животных.",
     footerLegalText2: "AGROMAL не является продавцом, покупателем, собственником, хранителями или перевозчиком животных и не принимает денежные средства в оплату товара.",
     footerLegalText3: "Договор купли-продажи заключается непосредственно между Поставщиком и Закупщиком. Расчёты за животных осуществляются непосредственно между сторонами сделки.",
-    minVolumeLabel: "МИНИМАЛЬНЫЙ ОБЪЁМ ЛОТА",
-    minVolumeAmount: "от 800 000 сом",
     trustSecure: "Безопасность",
     trustTransparent: "Прозрачность",
     trustVerified: "Проверенные сделки",
@@ -362,6 +349,7 @@ currencyUsd: "Доллар",
     navHow: "Как работает",
     navLots: "Публичные лоты",
     navTerms: "Условия",
+    navEnter: "Вход",
     navHowFull: "Как работает платформа",
     heroCtaHow: "Как работает платформа",
 
@@ -1415,23 +1403,13 @@ lotImageRemove:
 
     /* HERO */
 
-    heroLabel:
-      "ЖАБЫК САНАРИПТИК МААЛЫМАТТЫК-СООДА ПЛАТФОРМАСЫ",
 
-    heroTitle:
-      "Мал чарба продукциясын дүң сатып алуулар үчүн санариптик инфраструктура.",
 
-    heroText:
-      "фермердин сунушун жаныбарларды идентификациялоо, ветеринардык текшерүү жана фото-видео каттоосу менен текшерилген дүң лотко айландырып, аны түздөн-түз кесипкөй сатып алуучу менен байланыштырат.",
 
     formulaLabel:
       "",
 
-    formulaMain:
-      "БИР ЛОТ. БИР БАА. БИР КЕЛИШИМ.",
 
-    formulaNote:
-      "Соодалашуу жок. Ашыкча ортомчулар жок. Малды өз балансына сатып алуу жок.",
 
     principlesTitle:
       "ПЛАТФОРМАНЫН ИШТӨӨ ПРИНЦИБИ",
@@ -1568,6 +1546,12 @@ lotImageRemove:
     passwordShort:
       "Сырсөз кеминде 12 белгиден турушу керек.",
 
+    consentPrefix:
+      "Тааныштым(бышьым мүмкүн):",
+
+    consentRequired:
+      "Купуялык саясаты менен таанышканыңызды ырастоо керек.",
+
     /* ACCESS */
 
     confidentialityNotice:
@@ -1642,8 +1626,6 @@ currencyUsd: "Доллар",
     footerLegalText1: "AGROMAL — жеткирүүчүлөр менен сатып алуучулардын өз ара аракеттенүүсү үчүн көзкарандысыз маалыматтык-техникалык B2B-платформа.",
     footerLegalText2: "AGROMAL жаныбарлардын сатуучусу, сатып алуучусу, ээси, сактоочусу же ташуучусу эмес жана товарды төлөө үчүн акча кабыл албайт.",
     footerLegalText3: "Сатуу-сатып алуу келишими жеткирүүчү менен сатып алуучунун ортосунда түз гана түзүлөт. Жаныбарлар үчүн төлөмдөр келишим тараптарынын ортосунда түз жүргүзүлөт.",
-    minVolumeLabel: "ЛОТТУН МИНИМАЛДУУ КӨЛӨМҮ",
-    minVolumeAmount: "800 000 сомдон",
     trustSecure: "Коопсуздук",
     trustTransparent: "Ачыктык",
     trustVerified: "Текшерилген келишимдер",
@@ -1654,6 +1636,7 @@ currencyUsd: "Доллар",
     navHow: "КАНТИП ИШТЕЙТ",
     navLots: "АЧЫК ЛОТТОР",
     navTerms: "ШАРТТАР",
+    navEnter: "КИРҮҮ",
     navHowFull: "Платформа кантип иштейт",
     heroCtaHow: "Платформа кантип иштейт",
 
@@ -2403,8 +2386,6 @@ lotImageProcessingFailed:
     privacyBack:
       "← БАШКЫ БЕТКЕ КАЙТУУ",
 
-
-
     /* =====================================================
        PRIVACY PAGE (политика конфиденциальности)
        ===================================================== */
@@ -2696,23 +2677,13 @@ lotImageProcessingFailed:
 
     /* HERO */
 
-    heroLabel:
-      "PRIVATE DIGITAL INFORMATION AND TRADING PLATFORM",
 
-    heroTitle:
-      "Digital infrastructure for wholesale livestock procurement.",
 
-    heroText:
-      "turns a farmer’s offering into a verified wholesale lot with animal identification, veterinary inspection, and photo-video documentation — and directly connects it with a professional buyer.",
 
     formulaLabel:
       "",
 
-    formulaMain:
-      "ONE LOT. ONE PRICE. ONE DEAL.",
 
-    formulaNote:
-      "No haggling. No unnecessary intermediaries. No livestock purchase onto our balance sheet.",
 
     principlesTitle:
       "HOW THE PLATFORM WORKS",
@@ -2843,6 +2814,12 @@ lotImageProcessingFailed:
     passwordShort:
       "Password must contain at least 12 characters.",
 
+    consentPrefix:
+      "I have read the",
+
+    consentRequired:
+      "You must confirm that you have read the Privacy Policy.",
+
     /* ACCESS */
 
     confidentialityNotice:
@@ -2919,8 +2896,6 @@ lotImageProcessingFailed:
     footerLegalText1: "AGROMAL is an independent information-and-technology B2B platform for the interaction of Suppliers and Buyers of agricultural animals.",
     footerLegalText2: "AGROMAL is not a seller, a buyer, an owner, a keeper or a carrier of animals, and does not accept funds as payment for goods.",
     footerLegalText3: "The sale-and-purchase contract is concluded directly between the Supplier and the Buyer. Payments for animals are made directly between the parties of the deal.",
-    minVolumeLabel: "MINIMUM LOT VOLUME",
-    minVolumeAmount: "from 800 000 som",
     trustSecure: "Security",
     trustTransparent: "Transparency",
     trustVerified: "Verified deals",
@@ -2931,6 +2906,7 @@ lotImageProcessingFailed:
     navHow: "How it works",
     navLots: "Public lots",
     navTerms: "Terms",
+    navEnter: "Sign in",
     navHowFull: "How the platform works",
     heroCtaHow: "How the platform works",
 
@@ -3690,8 +3666,6 @@ chuy:
 
     privacyBack:
       "← BACK HOME",
-
-
 
     /* =====================================================
        PRIVACY PAGE (политика конфиденциальности)

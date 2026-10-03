@@ -1,13 +1,13 @@
-import { redirectForAccess, requireAccess } from "./auth.js";
-import { create, formatNumber, initCommon, setState } from "./common.js";
+import { redirectForAccess, requireAccess } from "./auth.js?v=20261003c";
+import { create, formatNumber, initCommon, setState } from "./common.js?v=20261003c";
 import {
   db,
   invokeFunction,
   uploadLotImage,
   deleteLotImage,
   createLotImageSignedUrl
-} from "./supabase.js";
-import { t } from "./i18n.js";
+} from "./supabase.js?v=20261003c";
+import { t } from "./i18n.js?v=20261003c";
 
 initCommon();
 

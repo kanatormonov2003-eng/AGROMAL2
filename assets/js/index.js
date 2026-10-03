@@ -1,7 +1,7 @@
-import { initCommon, setState } from "./common.js";
-import { requireAccess } from "./auth.js";
-import { signIn, signOut } from "./supabase.js";
-import { t } from "./i18n.js";
+import { initCommon, setState } from "./common.js?v=20261003c";
+import { requireAccess } from "./auth.js?v=20261003c";
+import { signIn, signOut } from "./supabase.js?v=20261003c";
+import { t } from "./i18n.js?v=20261003c";
 
 initCommon();
 
@@ -10,6 +10,7 @@ const identifier = document.querySelector("#identifier");
 const password = document.querySelector("#password");
 const submit = document.querySelector("#login-button");
 const message = document.querySelector("#login-message");
+const consent = document.querySelector("#privacy-consent");
 
 const HOMEPAGE_WHATSAPP_URL = "https://wa.me/996501095950";
 
@@ -104,6 +105,22 @@ identifier.addEventListener(
 
 
 /* =========================================================
+   PRIVACY CONSENT
+   ========================================================= */
+
+if (consent) {
+  consent.addEventListener(
+    "change",
+    () => {
+      if (consent.checked) {
+        const wrapper = consent.closest(".privacy-check");
+        if (wrapper) wrapper.classList.remove("privacy-check--invalid");
+      }
+    }
+  );
+}
+
+/* =========================================================
    LOGIN
    ========================================================= */
 
@@ -134,6 +151,21 @@ form.addEventListener(
         message,
         "error",
         t("passwordShort")
+      );
+    }
+
+    if (consent && !consent.checked) {
+      const wrapper = consent.closest(".privacy-check");
+      if (wrapper) {
+        wrapper.classList.remove("privacy-check--invalid");
+        void wrapper.offsetWidth;
+        wrapper.classList.add("privacy-check--invalid");
+      }
+
+      return setState(
+        message,
+        "error",
+        t("consentRequired")
       );
     }
 

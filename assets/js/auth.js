@@ -1,4 +1,4 @@
-import { getUser, isConfigured, rpc, signOut } from "./supabase.js";
+import { getUser, isConfigured, rpc, signOut } from "./supabase.js?v=20261003c";
 
 export async function requireAccess(requiredRole = null) {
   if (!isConfigured()) return { ok: false, reason: "configuration" };
