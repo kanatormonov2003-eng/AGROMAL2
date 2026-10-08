@@ -318,10 +318,10 @@ button{background:none;border:0;cursor:pointer}
   .hero__main{padding-top:24px;padding-bottom:20px}
   .hero__grid{gap:24px}
   .hero__intro{gap:14px}
-  .hero__art img{object-fit:contain}
-  body{font-size:16px;line-height:1.6}
-  .section__head p,.problem__fact,.problem__solution{font-size:16.5px;line-height:1.62}
-  .feature p,.term p,.lot dd,.support span,.access-card small{font-size:14.5px;line-height:1.58}
+  .hero__art img{height:auto;object-fit:cover}
+  body{font-size:15px;line-height:1.55}
+  .section__head p,.problem__fact,.problem__solution{font-size:14.5px;line-height:1.55}
+  .feature p,.term p,.lot dd,.support span,.access-card small{font-size:13px;line-height:1.5}
   .term{padding:14px;gap:10px}
   .feature{padding:14px;gap:10px}
   .access-card{padding:12px;flex-direction:column;align-items:flex-start;gap:10px}
@@ -333,26 +333,32 @@ button{background:none;border:0;cursor:pointer}
   .section__head{margin-bottom:26px;gap:14px}
   .terminal__head{padding:10px 12px;gap:9px}
   .terminal__body{padding:12px}
-  .terminal__sub{font-size:13px;margin-bottom:12px}
-  .field+.field{margin-top:10px}
-  .field{gap:5px}
-  .field__control input{height:40px;padding:0 11px;font-size:15px}
-  .field__eye{width:40px;height:40px}
-  .login-submit{margin-top:12px;height:var(--btn-h-sm)}
-  .login-message{margin-top:10px;font-size:13px;padding:8px 10px}
-  .principles li{padding:14px 0}
+  .terminal__sub{font-size:12px;margin-bottom:10px}
+  .field+.field{margin-top:8px}
+  .field{gap:4px}
+  .field label{font-size:10.5px;letter-spacing:.1em}
+  .field__control input{height:38px;padding:0 10px;font-size:14px}
+  .field__eye{width:38px;height:38px}
+  .field__eye svg{width:16px;height:16px}
+  .login-submit{margin-top:10px;height:38px;font-size:var(--fs-xs);letter-spacing:.05em}
+  .btn{height:38px;padding:0 14px;font-size:var(--fs-xs)}
+  .login-message{margin-top:8px;font-size:12px;padding:7px 9px}
+  .principles li{padding:12px 0}
   .principles li{grid-template-columns:1fr;gap:6px}
-  .principles li p{font-size:15.5px}
-  .problem__title{font-size:1.45rem;margin-top:14px}
-  .problem__fact{margin-top:14px}
-  .problem__solution{margin-top:12px;padding-left:14px;font-size:15.5px}
-  .problem__source{margin-top:14px;padding-top:10px;font-size:13.5px}
-  .problem{gap:20px}
+  .principles li p{font-size:14px}
+  .problem__title{font-size:1.3rem;margin-top:12px}
+  .problem__fact{margin-top:12px}
+  .problem__solution{margin-top:10px;padding-left:12px;font-size:14px}
+  .problem__source{margin-top:12px;padding-top:8px;font-size:12px}
+  .problem{gap:16px}
   .principles li b{color:var(--accent)}
   .hero__cta .btn{width:100%}
   .lot__head{flex-direction:column;align-items:flex-start;gap:8px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.site-footer__legal{display:flex;flex-direction:column;gap:10px}
+.site-footer__brandline{margin-top:14px;font-size:15px;line-height:1.5;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.site-footer__smallline{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -398,7 +404,7 @@ button{background:none;border:0;cursor:pointer}
 
       <div class="hero__intro">
         <figure class="hero__art">
-          <img src="./assets/img/74ad4433-b5ce-4f85-968c-d53bc1f81fb0.jfif" alt="AGROMAL — цифровая инфраструктура для оптовых закупок животноводческой продукции">
+          <img src="./assets/img/hero-full.jfif" alt="AGROMAL — цифровая инфраструктура для оптовых закупок животноводческой продукции">
         </figure>
 
         <div class="hero__cta">
@@ -459,7 +465,7 @@ button{background:none;border:0;cursor:pointer}
               </span>
               <span class="privacy-check__label">
                 <span data-i18n="consentPrefix">Ознакомился(ась) с</span>
-                <a href="./privacy.html" target="_blank" rel="noopener noreferrer" data-i18n="footerPrivacy">Политика конфиденциальности</a>
+                <a href="./privacy.html" target="_blank" rel="noopener noreferrer" data-i18n="footerPrivacy">Политика обработки персональных данных</a>
               </span>
             </label>
 
@@ -804,7 +810,8 @@ button{background:none;border:0;cursor:pointer}
     <div class="site-footer__grid">
       <div>
         <div class="brand">
-          <span class="brand__mark">A</span><span>AgroMal.kg</span>
+          <img class="brand__logo" src="./assets/img/logo.jfif" alt="">
+          <span>AgroMal.kg</span>
         </div>
         <p data-i18n="footerAbout">Закрытая цифровая информационно-торговая платформа для оптовых
           закупок животноводческой продукции. Кыргызстан.</p>
@@ -832,15 +839,8 @@ button{background:none;border:0;cursor:pointer}
       <strong data-i18n="footerLegalTitle2">Юридический статус платформы</strong>
       <span data-i18n="footerLegalText1">AGROMAL — независимая информационно-техническая B2B-платформа для
         взаимодействия Поставщиков и Закупщиков сельскохозяйственных животных.</span>
-      <span data-i18n="footerLegalText2">AGROMAL не является продавцом, покупателем, собственником,
-        хранителями или перевозчиком животных и не принимает денежные средства
-        в оплату товара.</span>
-      <span data-i18n="footerLegalText3">Договор купли-продажи заключается непосредственно между Поставщиком
-        и Закупщиком. Расчёты за животных осуществляются непосредственно между
-        сторонами сделки.</span>
-      <span data-i18n="featureNote">Полевой осмотр и верификация AGROMAL не заменяют обязательное
-        ветеринарное оформление.</span>
-      <span data-i18n="footerLegal5">Оператор платформы: ИП [ФИО].</span>
+      <strong class="site-footer__brandline" data-i18n="footerLegal5">ЗАКРЫТАЯ B2B-ПЛАТФОРМА<br>ОПТОВЫХ ПАРТИЙ СКОТА</strong>
+      <span class="site-footer__smallline" data-i18n="footerLegal6">Кыргызстан • КРС • МРС • ЛОШАДИ • ЯКИ</span>
     </div>
 
     <div class="site-footer__base">
@@ -848,7 +848,7 @@ button{background:none;border:0;cursor:pointer}
       <span class="site-footer__flag">
         <img src="./assets/img/kyrgyzstan-flag.svg" alt=""><span data-i18n="footerFlag">Кыргызстан</span>
       </span>
-      <a href="./privacy.html" data-i18n="footerPrivacy">Политика конфиденциальности</a>
+      <a href="./privacy.html" data-i18n="footerPrivacy">Политика обработки персональных данных</a>
     </div>
   </div>
 </footer>
