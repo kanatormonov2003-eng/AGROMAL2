@@ -194,7 +194,7 @@ chuy:
        ===================================================== */
 
     loginTitle:
-      "ВХОД В ТОРГОВЫЙ ТЕРМИНАЛ",
+      "ВХОД В AGROMAL",
 
     loginSub:
       "Доступ только для активных проверенных организаций",
@@ -259,6 +259,9 @@ currencyUsd: "Доллар",
 
     consentPrefix:
       "Ознакомился(ась) с",
+
+    consentPolicyLink:
+      "политикой обработки персональных данных",
 
     consentRequired:
       "Необходимо подтвердить ознакомление с Политикой конфиденциальности.",
@@ -336,7 +339,7 @@ currencyUsd: "Доллар",
     lotVolumeLabel: "Объём",
     lotRegionLabel: "Регион",
     lotKazyLabel: "Казы",
-    terminalTitle: "Вход в торговый терминал",
+    terminalTitle: "Вход в AGROMAL",
     terminalSub: "Доступ только для активных проверенных организаций",
     footerLegalTitle2: "Юридический статус платформы",
     footerLegalText1: "AGROMAL — независимая информационно-техническая B2B-платформа для организации и сопровождения взаимодействия Поставщиков и Закупщиков сельскохозяйственных животных.",
@@ -393,10 +396,10 @@ currencyUsd: "Доллар",
     term6Title: "Прямой расчёт",
     term6Text: "Расчёты за животных осуществляются непосредственно между сторонами сделки. AGROMAL не принимает денежные средства в оплату товара.",
 
-    footerAbout: "Закрытая цифровая информационно-торговая платформа для оптовых закупок животноводческой продукции. Кыргызстан.",
+    footerAbout: "Закрытая цифровая B2B-платформа крупных оптовых партий живого скота. Кыргызстан.",
     footerSections: "Разделы",
     footerContacts: "Связь",
-    footerTerminal: "Вход в торговый терминал",
+    footerTerminal: "Вход в AGROMAL",
     footerPrivacy: "Политика обработки персональных данных",
     footerFlag: "Кыргызстан",
     footerCopyrightYear: "© 2026 AgroMal.kg",
@@ -1708,7 +1711,7 @@ lotImageRemove:
     /* LOGIN */
 
     loginTitle:
-      "СООДА ТЕРМИНАЛЫНА КИРҮҮ",
+      "AGROMALГА КИРҮҮ",
 
     loginSub:
       "Активдүү текшерилген уюмдар үчүн гана",
@@ -1768,7 +1771,10 @@ lotImageRemove:
       "Сырсөз кеминде 12 белгиден турушу керек.",
 
     consentPrefix:
-      "Тааныштым(бышьым мүмкүн):",
+      "Тааныштым:",
+
+    consentPolicyLink:
+      "Жеке маалыматтарды иштетүү саясаты",
 
     consentRequired:
       "Купуялык саясаты менен таанышканыңызды ырастоо керек.",
@@ -1840,7 +1846,7 @@ currencyUsd: "Доллар",
     lotVolumeLabel: "Көлөм",
     lotRegionLabel: "Аймак",
     lotKazyLabel: "Казы",
-    terminalTitle: "Соода терминалине кирүү",
+    terminalTitle: "AGROMALга кирүү",
     terminalSub: "Тек гана активдүү текшерилген уюмдар үчүн",
     taglineBefore: "ДҮҢ МАЛ ПАРТИЯЛАРЫ",
     footerLegalTitle2: "Платформанын юридикалык абалы",
@@ -1898,10 +1904,10 @@ currencyUsd: "Доллар",
     term6Title: "Түз эсептешүү",
     term6Text: "Жаныбарлар үчүн төлөмдөр келишим тараптарынын ортосунда түз гана жүргүзүлөт. AGROMAL товарды төлөө үчүн акча кабыл албайт.",
 
-    footerAbout: "Жабык цифрдык маалыматтык-соода платформасы — мал чарба продукциясын дүң сатып алуу үчүн. Кыргызстан.",
+    footerAbout: "Жабык цифрдык B2B-платформа — тирүү малдын ири дүң партиялары үчүн. Кыргызстан.",
     footerSections: "Бөлүмдөр",
     footerContacts: "Байланыш",
-    footerTerminal: "Соода терминалине кирүү",
+    footerTerminal: "AGROMALга кирүү",
     footerPrivacy: "Даректөө жеке маалыматтарды иштетүү саясаты",
     footerFlag: "Кыргызстан",
     footerCopyrightYear: "© 2026 AgroMal.kg",
@@ -3194,7 +3200,7 @@ lotImageProcessingFailed:
     /* LOGIN */
 
     loginTitle:
-      "TRADING TERMINAL ACCESS",
+      "AGROMAL ACCESS",
 
     loginSub:
       "Active verified organizations only",
@@ -3255,6 +3261,9 @@ lotImageProcessingFailed:
 
     consentPrefix:
       "I have read the",
+
+    consentPolicyLink:
+      "Personal Data Processing Policy",
 
     consentRequired:
       "You must confirm that you have read the Privacy Policy.",
@@ -3328,7 +3337,7 @@ lotImageProcessingFailed:
     lotVolumeLabel: "Volume",
     lotRegionLabel: "Region",
     lotKazyLabel: "Kazy",
-    terminalTitle: "Trading terminal access",
+    terminalTitle: "AGROMAL access",
     terminalSub: "Only for active verified organizations",
     taglineBefore: "WHOLESALE LIVESTOCK LOTS",
     footerLegalTitle2: "Legal status of the platform",
@@ -3386,10 +3395,10 @@ lotImageProcessingFailed:
     term6Title: "Direct settlement",
     term6Text: "Payments for animals are made directly between the parties of the deal. AGROMAL does not accept funds as payment for goods.",
 
-    footerAbout: "A closed digital information-and-trading platform for wholesale purchases of livestock products. Kyrgyzstan.",
+    footerAbout: "A closed digital B2B platform for large wholesale lots of live livestock. Kyrgyzstan.",
     footerSections: "Sections",
     footerContacts: "Contacts",
-    footerTerminal: "Enter the trading terminal",
+    footerTerminal: "Enter AGROMAL",
     footerPrivacy: "Personal Data Processing Policy",
     footerFlag: "Kyrgyzstan",
     footerCopyrightYear: "© 2026 AgroMal.kg",
