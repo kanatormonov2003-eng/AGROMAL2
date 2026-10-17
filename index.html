@@ -306,6 +306,9 @@ button{background:none;border:0;cursor:pointer}
 .site-footer__base{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:28px;padding-top:20px;
   border-top:1px solid #2C2925;font-size:var(--fs-xs);color:#6E6A62}
 .site-footer__base a:hover{color:#fff}
+.site-footer__base .footer__docs{display:flex;flex-wrap:wrap;gap:6px 14px}
+.site-footer__base .footer__docs a{color:#B9B4AA}
+.site-footer__base .footer__docs a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .site-footer__flag{display:inline-flex;align-items:center;gap:8px}
 .site-footer__flag img{width:16px;height:11px}
 
@@ -418,7 +421,7 @@ button{background:none;border:0;cursor:pointer}
         </div>
       </div>
 
-      <div class="terminal">
+      <div class="terminal" id="login">
         <div class="terminal__head">
           <span class="dot" aria-hidden="true"></span>
           <h2 data-i18n="terminalTitle">Вход в AGROMAL</h2>
@@ -464,8 +467,8 @@ button{background:none;border:0;cursor:pointer}
                 </svg>
               </span>
               <span class="privacy-check__label">
-                <span data-i18n="consentPrefix">Ознакомился(ась) с</span>
-                <a href="./privacy.html" target="_blank" rel="noopener noreferrer" data-i18n="consentPolicyLink">политикой обработки персональных данных</a>
+                <span data-i18n="consentPrefix">Я даю согласие на обработку моих персональных данных в соответствии с</span>
+                <a href="./privacy.html" target="_blank" rel="noopener noreferrer" data-i18n="consentPolicyLink">Политикой обработки персональных данных AGROMAL</a>
               </span>
             </label>
 
@@ -829,7 +832,7 @@ button{background:none;border:0;cursor:pointer}
         <h4 data-i18n="footerContacts">Связь</h4>
         <ul>
           <li><a href="https://wa.me/996501095950" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-          <li><a href="#hero" data-i18n="footerTerminal">Вход в AGROMAL</a></li>
+          <li><a href="#login" data-i18n="footerTerminal">Вход в AGROMAL</a></li>
           <li>+996 (501) 09-59-50</li>
         </ul>
       </div>
@@ -844,11 +847,13 @@ button{background:none;border:0;cursor:pointer}
     </div>
 
     <div class="site-footer__base">
-      <span data-i18n="footerCopyrightYear">© 2026 AgroMal.kg</span>
-      <span class="site-footer__flag">
-        <img src="./assets/img/kyrgyzstan-flag.svg" alt=""><span data-i18n="footerFlag">Кыргызстан</span>
-      </span>
-      <a href="./privacy.html" data-i18n="footerPrivacy">Политика обработки персональных данных</a>
+      <span>© 2026 AGROMAL.KG · <span data-i18n="footerFlag">Кыргызстан</span></span>
+      <nav class="footer__docs" aria-label="Документы">
+        <a href="./terms.html" data-i18n="footerTerms">Условия сервиса</a>
+        <a href="./rules.html" data-i18n="footerRules">Правила платформы</a>
+        <a href="./privacy.html" data-i18n="footerPrivacy">Политика обработки персональных данных</a>
+        <a href="./legal.html" data-i18n="footerLegal">Реквизиты и юридическая информация</a>
+      </nav>
     </div>
   </div>
 </footer>
