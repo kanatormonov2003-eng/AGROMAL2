@@ -17,8 +17,8 @@ const messages = {
     taglineAfter:
       "ОПТОВЫЕ ПАРТИИ СКОТА",
 
-    footerLegal5: "ЗАКРЫТАЯ B2B-ПЛАТФОРМА\nОПТОВЫХ ПАРТИЙ СКОТА",
-    footerLegal6: "Кыргызстан • КРС • МРС • ЛОШАДИ • ЯКИ",
+    footerHeroLegal5: "ЗАКРЫТАЯ B2B-ПЛАТФОРМА\nОПТОВЫХ ПАРТИЙ СКОТА",
+    footerHeroLegal6: "Кыргызстан • КРС • МРС • ЛОШАДИ • ЯКИ",
  
     kg:
       "КГ",
@@ -295,10 +295,10 @@ currencyUsd: "Доллар",
        SUPPORT
        ===================================================== */
 
-    supportTitle:
+    supportCardTitle:
       "📞 СЛУЖБА КОРПОРАТИВНОЙ ПОДДЕРЖКИ:",
 
-    supportText:
+    supportCardText:
       "Свяжитесь с координатором для ручной верификации",
 
     supportPhone:
@@ -373,28 +373,26 @@ currencyUsd: "Доллар",
     lotsNoticeTitle: "Режим конфиденциальности.",
 
     termsKicker: "УСЛОВИЯ ДЛЯ ФЕРМЕРА И ЗАКУПЩИКА",
-    termsTitle: "Бесплатное размещение и прозрачный сервисный сбор",
-    termsLead: "AGROMAL — независимая информационно-техническая B2B-платформа. Платформа не является продавцом, покупателем или перевозчиком животных.",
+    termsTitle: "Бесплатное размещение. Прозрачные условия.",
+    termsLead: "AGROMAL — независимая B2B-платформа для организации оптовых сделок с живым скотом. Мы организуем проверку лотов и сопровождаем взаимодействие сторон. Договор купли-продажи заключается напрямую между поставщиком и закупщиком.",
 
     term1Title: "Размещение лота — бесплатно",
-    term1Text: "Фермер может разместить партию скота на AGROMAL бесплатно и без обязательств. Он вправе в любой момент самостоятельно продать скот или выбрать другой способ реализации. Если лот уже продан — достаточно сообщить AGROMAL.",
-    term1Small: "Размещение лота для фермера — бесплатно и ни к чему его не обязывает.",
+    term1Text: "Фермер бесплатно предлагает партию скота и самостоятельно определяет цену.\n\nРазмещение ни к чему не обязывает: вы можете отказаться от продажи или выбрать другой способ реализации.\n\nЕсли скот уже продан, достаточно сообщить AGROMAL.",
 
     term2Title: "Сервис AGROMAL — 4%",
-    term2Text: "При бронировании лота оплачивается сервисный сбор 4% от суммы сделки. AGROMAL проводит проверку лота по своему регламенту и координирует необходимые процедуры до сделки и погрузки.",
-    term2Sub: "Хотите проверить самостоятельно? Вы можете приехать лично или направить своего представителя.",
+    term2Text: "Закупщик оплачивает сервис AGROMAL в размере 4% от суммы сделки на заранее согласованных условиях.\n\nМы организуем проверку партии, фиксируем её результаты и координируем сопровождение сделки.",
 
-    term3Title: "Цена фермера",
-    term3Text: "Цена фермера фиксируется при размещении лота. Условия окончательного расчёта определяются сторонами в договоре сделки.",
+    term3Title: "Цена и условия продажи",
+    term3Text: "Фермер самостоятельно определяет цену партии.\n\nОкончательные условия продажи и порядок расчёта за скот поставщик и закупщик согласовывают напрямую и фиксируют в договоре купли-продажи.",
 
-    term4Title: "Контрольный вес",
-    term4Text: "Вес в карточке лота до контрольного взвешивания может быть предварительным. Окончательный вес и порядок расчёта фермер и закупщик фиксируют в договоре сделки.",
+    term4Title: "AGROMAL ПРОВЕРЕНО ✓",
+    term4Text: "Организуем проверку партии и фиксируем результаты осмотра, идентификации и фото- и видеоматериалы.",
 
-    term5Title: "Верификация и координация",
-    term5Text: "Идентификация животных, полевой осмотр при необходимости, фото-видеофиксация партии и координация процедур до погрузки.",
+    term5Title: "Контрольное взвешивание",
+    term5Text: "При необходимости и по согласованию сторон. Порядок расчёта фиксируется в договоре купли-продажи.",
 
     term6Title: "Прямой расчёт",
-    term6Text: "Расчёты за животных осуществляются непосредственно между сторонами сделки. AGROMAL не принимает денежные средства в оплату товара.",
+    term6Text: "Закупщик оплачивает скот непосредственно поставщику. AGROMAL не принимает деньги в оплату животных.",
 
     footerAbout: "Закрытая цифровая B2B-платформа крупных оптовых партий живого скота. Кыргызстан.",
     footerSections: "Разделы",
@@ -1065,7 +1063,7 @@ lotImageProcessingFailed:
        PRIVACY
        ===================================================== */
 
-    privacyTitle:
+    privacyTitleLegacy:
       "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ И ЗАЩИТЫ ДАННЫХ B2B-ПЛАТФОРМЫ AGROMAL.KG",
 
     publicationDate:
@@ -1107,7 +1105,7 @@ lotImageProcessingFailed:
     privacySection12:
       "Контакты оператора",
 
-    privacyBack:
+    privacyBackLegacy:
       "← ВЕРНУТЬСЯ НА ГЛАВНУЮ",
 
 
@@ -1535,7 +1533,7 @@ lotImageProcessingFailed:
       "© AGROMAL 2026",
 
     /* УСЛОВИЯ СЕРВИСА */
-    termsTitle: "УСЛОВИЯ СЕРВИСА AGROMAL",
+    termsPageTitle: "УСЛОВИЯ СЕРВИСА AGROMAL",
     docEdition: "Редакция № 1",
     rulesTitle: "ПРАВИЛА ПЛАТФОРМЫ AGROMAL",
     docPublished: "Дата публикации: [дата]",
@@ -1891,8 +1889,8 @@ lotImageProcessingFailed:
       taglineBefore: "ДҮҢ МАЛ ПАРТИЯЛАРЫ",
       taglineAfter: "ДҮҢ МАЛ ПАРТИЯЛАРЫ",
 
-      footerLegal5: "ЖАБЫК B2B-ПЛАТФОРМА\nДҮҢ МАЛ ПАРТИЯЛАРЫ",
-      footerLegal6: "Кыргызстан • КРС • МРС • АТТАР • ЯКИ",
+      footerHeroLegal5: "ЖАБЫК B2B-ПЛАТФОРМА\nДҮҢ МАЛ ПАРТИЯЛАРЫ",
+      footerHeroLegal6: "Кыргызстан • КРС • МРС • АТТАР • ЯКИ",
 
     kg:
       "КГ",
@@ -2143,10 +2141,10 @@ currencyUsd: "Доллар",
 
     /* SUPPORT */
 
-    supportTitle:
+    supportCardTitle:
       "📞 КОРПОРАТИВДИК КОЛДОО КЫЗМАТЫ:",
 
-    supportText:
+    supportCardText:
       "Кол менен верификациядан өтүү үчүн координатор менен байланышыңыз",
 
     supportPhone:
@@ -2216,28 +2214,26 @@ currencyUsd: "Доллар",
     lotsNoticeTitle: "Купуялык режими.",
 
     termsKicker: "ФЕРМЕР ЖАНА САТЫП АЛУУЧУ ҮЧҮН ШАРТТАР",
-    termsTitle: "Акысыз жайгаштыруу жана ачык сервисдик төлөм",
-    termsLead: "AGROMAL — көзкарандысыз маалыматтык-техникалык B2B-платформа. Платформа малдын сатуучусу, сатып алуучусу же ташуучусу эмес.",
+    termsTitle: "Акысыз жайгаштыруу. Ачык шарттар.",
+    termsLead: "AGROMAL — тирүү малдун дүң соода-саттыктарын уюштуруу үчүн көзкарандысыз B2B-платформа. Биз лоттордун текшерүүсүн уюштурабыз жана тараптардын өз ара аракетин коштойбуз. Сатуу-сатып алуу келишими түздөн-түз сатуучу менен сатып алуучунун ортосунда түзүлөт.",
 
     term1Title: "Лотту жайгаштыруу — акысыз",
-    term1Text: "Фермер AGROMALга мал партиясын акысыз жана милдеттенмесиз жайгаштыра алат. Ал каалаган убакта өзүнчө малды сата алат же башка жолду тандай алат. Эгер лот сатылып кетсе — AGROMALга кабарлоо жетиштүү.",
-    term1Small: "Фермер үчүн лотту жайгаштыруу акысыз жана эч нерсеге милдеттенбейт.",
+    term1Text: "Фермер мал партиясын акысыз сунуш кылат жана баасын өзү белгилеп берет.\n\nЖайгаштыруу эч нерсеге милдеттенбейт: сатуудан баш тарта аласыз же башка жолду тандай аласыз.\n\nЭгер мал сатылып кетсе, AGROMALга кабарлоо жетиштүү.",
 
     term2Title: "AGROMAL сервиси — 4%",
-    term2Text: "Лотту брондоп алууда келишимдин суммасынан 4% сервисдик төлөм төлөнөт. AGROMAL лотту өз регламентине ылайык текшерет жана келишимге чейинки жана жүктөөгө чейинки процедураларды макулдаштырат.",
-    term2Sub: "Өзүңүз текшергиңиз келиби? Жеке келе аласыз же өкүлүңүздү жибере аласыз.",
+    term2Text: "Сатып алуучу AGROMAL сервисине келишимдин суммасынан 4% өлчөмүндө, алдын ала макулдашылган шарттардын негизинде төлөйт.\n\nБиз партиянын текшерүүсүн уюштурубуз, жыйынтыктарын жазып алабыз жана келишимди коштоону макулдаштырабыз.",
 
-    term3Title: "Фермердин баасы",
-    term3Text: "Фермердин баасы лотту жайгаштырганда белгиленип калат. Акыркы эсептөө шарттары тараптар тарабынан келишимде аныкталат.",
+    term3Title: "Баа жана сатуу шарттары",
+    term3Text: "Фермер партиянын баасын өзү белгилейт.\n\nСатуунун акыркы шарттары менен мал үчүн эсептөө тартибин сатуучу жана сатып алуучу түздөн-түз макулдашып, сатуу-сатып алуу келишиминде жазышат.",
 
-    term4Title: "Контролдук салмак",
-    term4Text: "Лот карточкасындагы салмак контролдук таразага чейин алдын ала болушу мүмкүн. Акыркы салмакты жана эсептөө тартибин фермер жана сатып алуучу келишимде белгилешет.",
+    term4Title: "AGROMAL ТЕКШЕРИЛГЕН ✓",
+    term4Text: "Партиянын текшерүүсүн уюштуруп, текшерүү, идентификациялоо жана фото-видео материалдарынын жыйынтыктарын жазып алабыз.",
 
-    term5Title: "Верификация жана макулдаштыруу",
-    term5Text: "Жаныбарларды идентификациялоо, зарыл болгон талаадагы текшерүү, партиянын фото-видеофиксациясы жана жүктөөгө чейинки процедураларды макулдаштыруу.",
+    term5Title: "Контролдук тараза",
+    term5Text: "Зарыл болгондо жана тараптардын макулдашуусу менен. Эсептөө тартиби сатуу-сатып алуу келишиминде жазылат.",
 
     term6Title: "Түз эсептешүү",
-    term6Text: "Жаныбарлар үчүн төлөмдөр келишим тараптарынын ортосунда түз гана жүргүзүлөт. AGROMAL товарды төлөө үчүн акча кабыл албайт.",
+    term6Text: "Сатып алуучу малды түздөн-түз сатуучуга төлөйт. AGROMAL мал үчүн акча кабыл албайт.",
 
     footerAbout: "Жабык цифрдык B2B-платформа — тирүү малдын ири дүң партиялары үчүн. Кыргызстан.",
     footerSections: "Бөлүмдөр",
@@ -2906,7 +2902,7 @@ lotImageProcessingFailed:
 
     /* PRIVACY */
 
-    privacyTitle:
+    privacyTitleLegacy:
       "AGROMAL.KG B2B-ПЛАТФОРМАСЫНЫН КУПУЯЛУУЛУК ЖАНА МААЛЫМАТТАРДЫ КОРГОО САЯСАТЫ",
 
     publicationDate:
@@ -2948,7 +2944,7 @@ lotImageProcessingFailed:
     privacySection12:
       "12. Оператордун байланыштары",
 
-    privacyBack:
+    privacyBackLegacy:
       "← БАШКЫ БЕТКЕ КАЙТУУ",
 
     /* =====================================================
@@ -3375,7 +3371,7 @@ lotImageProcessingFailed:
       "© AGROMAL 2026",
 
     /* УСЛОВИЯ СЕРВИСА */
-    termsTitle: "AGROMAL СЕРВИС ШАРТТАРЫ",
+    termsPageTitle: "AGROMAL СЕРВИС ШАРТТАРЫ",
     docEdition: "1-редакция",
     rulesTitle: "AGROMAL ПЛАТФОРМА ЭРЕЖЕЛЕРИ",
     docPublished: "Жарыяланган күнү: [ дата ]",
@@ -3725,8 +3721,8 @@ lotImageProcessingFailed:
     taglineAfter:
       "WHOLESALE LIVESTOCK LOTS",
 
-    footerLegal5: "CLOSED B2B PLATFORM\nFOR WHOLESALE LIVESTOCK LOTS",
-    footerLegal6: "Kyrgyzstan • CATTLE • SHEEP • HORSES • YAKS",
+    footerHeroLegal5: "CLOSED B2B PLATFORM\nFOR WHOLESALE LIVESTOCK LOTS",
+    footerHeroLegal6: "Kyrgyzstan • CATTLE • SHEEP • HORSES • YAKS",
 
     kg:
       "KY",
@@ -3960,10 +3956,10 @@ lotImageProcessingFailed:
 
     /* SUPPORT */
 
-    supportTitle:
+    supportCardTitle:
       "📞 CORPORATE SUPPORT SERVICE:",
 
-    supportText:
+    supportCardText:
       "Contact the coordinator for manual verification",
 
     supportPhone:
@@ -4039,28 +4035,27 @@ lotImageProcessingFailed:
     lotsNoticeTitle: "Privacy mode.",
 
     termsKicker: "TERMS FOR FARMER AND BUYER",
-    termsTitle: "Free listing and a transparent service fee",
-    termsLead: "AGROMAL is an independent information-and-technology B2B platform. The platform is not a seller, a buyer or a carrier of animals.",
+    termsTitle: "Free listing. Transparent terms.",
+    termsLead: "AGROMAL is an independent B2B platform for organising wholesale deals in live livestock. We arrange lot verification and accompany the interaction between the parties. The sale-and-purchase contract is concluded directly between the supplier and the buyer.",
 
     term1Title: "Listing a lot is free",
-    term1Text: "A farmer can list a batch of livestock on AGROMAL free of charge and with no obligations. They may at any moment sell the livestock independently or choose another way to sell. If the lot is already sold, it is enough to notify AGROMAL.",
-    term1Small: "Listing a lot is free for the farmer and obliges them to nothing.",
+    term1Text: "A farmer offers a batch of livestock free of charge and sets the price themselves.\n\nListing obliges you to nothing: you may decline to sell or choose another way to sell.\n\nIf the livestock is already sold, it is enough to notify AGROMAL.",
 
     term2Title: "AGROMAL service — 4%",
-    term2Text: "When booking a lot, a service fee of 4% of the deal amount is paid. AGROMAL checks the lot according to its own regulations and coordinates the necessary procedures before the deal and loading.",
-    term2Sub: "Want to check for yourself? You may come in person or send your representative.",
+    term2Text: "The buyer pays for the AGROMAL service in the amount of 4% of the deal amount on pre-agreed terms.\n\nWe arrange the verification of the batch, record its results and coordinate the support of the deal.",
 
-    term3Title: "Farmer's price",
-    term3Text: "The farmer's price is fixed when the lot is listed. The terms of the final settlement are determined by the parties in the deal contract.",
 
-    term4Title: "Control weighing",
-    term4Text: "The weight in the lot card may be preliminary until control weighing. The final weight and the settlement procedure are fixed by the farmer and the buyer in the deal contract.",
+    term3Title: "Price and terms of sale",
+    term3Text: "The farmer sets the price of the batch themselves.\n\nThe final terms of sale and the procedure for paying for the livestock are agreed directly between the supplier and the buyer and fixed in the sale-and-purchase contract.",
 
-    term5Title: "Verification and coordination",
-    term5Text: "Identification of animals, field inspection when necessary, photo and video recording of the batch, and coordination of procedures before loading.",
+    term4Title: "AGROMAL VERIFIED ✓",
+    term4Text: "We arrange the verification of the batch and record the results of the inspection, identification and photo and video materials.",
+
+    term5Title: "Control weighing",
+    term5Text: "When necessary and by agreement of the parties. The settlement procedure is fixed in the sale-and-purchase contract.",
 
     term6Title: "Direct settlement",
-    term6Text: "Payments for animals are made directly between the parties of the deal. AGROMAL does not accept funds as payment for goods.",
+    term6Text: "The buyer pays for the livestock directly to the supplier. AGROMAL does not accept money as payment for animals.",
 
     footerAbout: "A closed digital B2B platform for large wholesale lots of live livestock. Kyrgyzstan.",
     footerSections: "Sections",
@@ -4740,7 +4735,7 @@ chuy:
 
     /* PRIVACY */
 
-    privacyTitle:
+    privacyTitleLegacy:
       "AGROMAL.KG B2B PLATFORM PRIVACY AND DATA PROTECTION POLICY",
 
     publicationDate:
@@ -4782,8 +4777,8 @@ chuy:
     privacySection12:
       "12. Operator Contacts",
 
-    privacyBack:
-      "← BACK HOME",
+    privacyBackLegacy:
+      "legacy ← BACK HOME",
 
     /* =====================================================
        PRIVACY PAGE (политика конфиденциальности)
@@ -5209,7 +5204,7 @@ chuy:
       "© AGROMAL 2026",
 
     /* TERMS OF SERVICE */
-    termsTitle: "AGROMAL TERMS OF SERVICE",
+    termsPageTitle: "AGROMAL TERMS OF SERVICE",
     docEdition: "Edition No. 1",
     rulesTitle: "AGROMAL PLATFORM RULES",
     docPublished: "Publication date: [date]",
