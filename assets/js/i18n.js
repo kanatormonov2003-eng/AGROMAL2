@@ -122,72 +122,54 @@ chuy:
       "ПРИНЦИП РАБОТЫ ПЛАТФОРМЫ",
 
     principle1:
-      "Фермер называет свою чистую цену.",
+      "ЦЕНА\nПоставщик определяет цену своей партии.",
 
     principle2:
-      "AGROMAL верифицирует лот, проверяет идентификацию животных и формирует торговое предложение.",
+      "ФОРМИРОВАНИЕ ЛОТА\nAGROMAL собирает информацию о партии, формирует предложение и организует проверку на соответствующем этапе.",
 
     principle3:
-      "Покупатель получает проверенный объём по заранее известной цене. Оплачивает напрямую фермеру.",
+      "ВЫБОР ЗАКУПЩИКА\nЗакупщик получает информацию о партии, её цене и результатах проведённой проверки.",
 
     principle4:
-      "Фермер получает 100% своей стоимости у ворот БЕЗ ТОРГА.",
+      "ПРЯМАЯ СДЕЛКА\nПоставщик и закупщик согласовывают окончательные условия и заключают договор купли-продажи напрямую.",
 
     principle5:
-      "Фиксированный сервисный сбор взимается только за фактически состоявшуюся сделку.",
+      "ОПЛАТА\nЗакупщик оплачивает скот непосредственно поставщику. Сервис AGROMAL оплачивается на заранее согласованных условиях.",
 
     /* =====================================================
        FEATURES
        ===================================================== */
 
     featureVerifiedLot:
-      "ПРОВЕРЕННЫЙ ЛОТ",
+      "ПРОВЕРКА ЛОТА",
 
     featureVerifiedLotText:
-      "Идентификация, ветеринарная проверка и фото-видеофиксация каждой партии скота.",
+      "Организуем проверку партии, фиксируем результаты осмотра, идентификации и фото- и видеоматериалы.",
 
     featureFullSupport:
-      "ПОЛНОЕ СОПРОВОЖДЕНИЕ",
+      "СОПРОВОЖДЕНИЕ СДЕЛКИ",
 
     featureFullSupportText:
-      "Ветеринарно-санитарные документы и юридическое оформление сделок.",
+      "Координируем взаимодействие поставщика и закупщика, организуем проверку партии и сопровождаем сделку.",
 
     featureDirectB2B:
       "ПРЯМЫЕ B2B-СДЕЛКИ",
 
     featureDirectB2BText:
-      "Прозрачные условия, фиксированная цена, без посредников и скрытых комиссий.",
+      "Поставщик и закупщик заключают договор напрямую. Условия согласовываются сторонами. Сервис AGROMAL — 4% от суммы сделки.",
 
     /* =====================================================
        SYSTEMS
        ===================================================== */
 
-    kyrgyzEmblem:
-      "",
 
-    tunduk:
-      "ТҮНДҮК",
 
-    iszh:
-      "ИСЖ",
 
-    ettnGns:
-      "ЭТТН / ГНС КР",
 
-    digitalAgroPlatform:
-      "DIGITAL AGRO-PLATFORM 2026",
 
-    halal:
-      "Halal",
 
-    halalSegment:
-      "HALAL СЕГМЕНТ",
 
-    halalCompliance:
-      "HALAL COMPLIANCE",
 
-    halalStandard:
-      "СТАНДАРТ АДАЛ",
 
     /* =====================================================
        LOGIN
@@ -203,16 +185,16 @@ chuy:
       "ИНН ОРГАНИЗАЦИИ",
 
     identifierPlaceholder:
-      "Укажите ID или ИНН организации",
+      "Введите ИНН организации",
 
     identifierAria:
-      "ID или ИНН организации",
+      "ИНН организации",
 
     password:
-      "ПАРОЛЬ ДОСТУПА",
+      "ПАРОЛЬ",
 
     passwordPlaceholder:
-      "Введите пароль доступа",
+      "Введите пароль",
     currencyKgs: "Сом",
 currencyKzt: "Тенге",
 currencyRub: "Рубль",
@@ -228,7 +210,7 @@ currencyUsd: "Доллар",
       "Скрыть пароль",
 
     connect:
-      "⚡ ПОДКЛЮЧИТЬСЯ К ТОРГОВОЙ СЕССИИ",
+      "ВОЙТИ В AGROMAL",
 
     connecting:
       "ПОДКЛЮЧЕНИЕ…",
@@ -261,7 +243,7 @@ currencyUsd: "Доллар",
       "Я даю согласие на обработку моих персональных данных в соответствии с",
 
     consentPolicyLink:
-      "политикой обработки персональных данных AGROMAL",
+      "Политикой обработки персональных данных AGROMAL",
 
     consentRequired:
       "Необходимо подтвердить ознакомление с политикой обработки персональных данных AGROMAL.",
@@ -283,13 +265,13 @@ currencyUsd: "Доллар",
       "ДЛЯ ЗАКУПЩИКОВ",
 
     buyerAccessText:
-      "Доступ для перерабатывающих предприятий, ритейл-сетей, ресторанных комплексов и профессиональных закупщиков.",
+      "Для мясоперерабатывающих предприятий, оптовых покупателей и компаний, закупающих скот крупными партиями.",
 
     supplierAccessTitle:
-      "РАЗМЕЩЕНИЕ ЛОТОВ И СНАБЖЕНИЕ",
+      "ПОСТАВЩИКАМ И ПАРТНЁРАМ",
 
     supplierAccessText:
-      "Подача заявок на бесплатное размещение оптовых партий скота от фермерских хозяйств и полевых инспекторов платформы.",
+      "Бесплатное предварительное размещение партий скота от фермеров и хозяйств. Полевые инспекторы и партнёры могут передавать предложения о крупных партиях.",
 
     /* =====================================================
        SUPPORT
@@ -340,7 +322,7 @@ currencyUsd: "Доллар",
     lotRegionLabel: "Регион",
     lotKazyLabel: "Казы",
     terminalTitle: "Вход в AGROMAL",
-    terminalSub: "Доступ только для активных проверенных организаций",
+    terminalSub: "Закрытая B2B-платформа для профессиональных закупщиков и поставщиков скота",
     footerLegalTitle2: "Юридический статус платформы",
     footerLegalText1: "AGROMAL — независимая информационно-техническая B2B-платформа для организации и сопровождения взаимодействия Поставщиков и Закупщиков сельскохозяйственных животных.",
     trustSecure: "Безопасность",
@@ -348,7 +330,6 @@ currencyUsd: "Доллар",
     trustVerified: "Проверенные сделки",
     supportTitle: "Служба корпоративной поддержки",
     supportMuted: "Свяжитесь с координатором для ручной верификации",
-    syncLabel: "Электронный документооборот",
     navProblem: "Проблема",
     navHow: "Как работает",
     navLots: "Публичные лоты",
@@ -358,18 +339,17 @@ currencyUsd: "Доллар",
     heroCtaHow: "Как работает платформа",
 
     problemKicker: "ПРОБЛЕМА, КОТОРУЮ AGROMAL РЕШАЕТ",
-    problemTitle: "Прямые закупки скота вместо рынка и лишних посреднических звеньев.",
-    problemFact: "В 2026 году животноводы Кыргызстана обозначили необходимость развития механизма прямой закупки скота вместо приобретения через рынки и посреднические услуги.",
-    problemSolution: "AGROMAL создаёт цифровую инфраструктуру для такого взаимодействия — напрямую соединяя фермеров с профессиональными закупщиками.",
-    problemSource: "Источник: Служба антимонопольного регулирования при Министерстве экономики и коммерции Кыргызской Республики, 2026 г.",
+    problemTitle: "КРУПНЫЕ ПАРТИИ СКОТА — НАПРЯМУЮ ОТ ХОЗЯЙСТВ К ЗАКУПЩИКАМ",
+    problemFact: "Фермерам бывает сложно найти покупателя на крупную партию скота, а закупщикам — собрать подходящие предложения из разных хозяйств.\nAGROMAL формирует структурированные оптовые лоты, организует проверку и соединяет поставщиков с профессиональными закупщиками для заключения прямых сделок.",
+    problemSolution: "AGROMAL — единый канал для формирования крупных партий и организации оптовых сделок с живым скотом.",
 
     howKicker: "ПРИНЦИП РАБОТЫ ПЛАТФОРМЫ",
-    howLead: "Договор купли-продажи заключается непосредственно между фермером и закупщиком. Расчёт за скот производится напрямую между сторонами.",
-    featureNote: "Полевой осмотр и верификация AGROMAL не заменяют обязательное ветеринарное оформление.",
+    howLead: "Поставщик и закупщик заключают договор купли-продажи напрямую. Оплата за скот производится непосредственно между сторонами.",
+    featureNote: "Проверка AGROMAL не заменяет обязательные ветеринарные документы.",
 
     lotsKicker: "ПУБЛИЧНЫЕ ЛОТЫ",
-    lotsNotice: "Актуальные коммерческие данные, объёмы и условия сделок доступны только зарегистрированным участникам после B2B-верификации.",
-    lotsNoticeBody: "Фото-видео материалы, точные объёмы и коммерческие условия доступны после регистрации и B2B-верификации. Публичные лоты представлены в демонстрационном формате.",
+    lotsNotice: "Подробная информация о реальных оптовых предложениях доступна зарегистрированным закупщикам после подтверждения их статуса.",
+    lotsNoticeBody: "Фотографии, видео, подробные характеристики и коммерческие условия доступны после регистрации и подтверждения статуса закупщика.",
     lotsNoticeTitle: "Режим конфиденциальности.",
 
     termsKicker: "УСЛОВИЯ ДЛЯ ФЕРМЕРА И ЗАКУПЩИКА",
@@ -1972,44 +1952,42 @@ lotImageRemove:
       "ПЛАТФОРМАНЫН ИШТӨӨ ПРИНЦИБИ",
 
     principle1:
-      "Фермер өзүнүн таза баасын айтат.",
+      "БАА\nПоставщик партиянын баасын өзү белгилейт.",
 
     principle2:
-      "AGROMAL лотту текшерет, жаныбарлардын идентификациясын ырастайт жана соода сунушун түзөт.",
+      "ЛОТТУ ТҮЗҮҮ\nAGROMAL партия жөнүндө маалымат чогултат, сунуш түзөт жана тиешелүү этапта текшерүүнү уюштурат.",
 
     principle3:
-      "Сатып алуучу алдын ала белгилүү баада текшерилген көлөмдү алат. Түздөн-түз фермерге төлөйт.",
+      "САТЫП АЛУУЧУНУН ТАНДООСУ\nСатып алуучу партия, анын баасы жана өткөрүлгөн текшерүүнүн жыйынтыктары жөнүндө маалымат алат.",
 
     principle4:
-      "Фермер өз наркынын 100%ын чарбанын дарбазасынан СООДАЛАШУУСУЗ алат.",
+      "ТҮЗ КЕЛИШИМ\nПоставщик жана сатып алуучу акыркы шарттарды макулдашып, сатуу-сатып алуу келишимин түздөн-түз түзөт.",
 
     principle5:
-      "Туруктуу сервистик төлөм иш жүзүндө аяктаган бүтүм үчүн гана алынат.",
+      "ТӨЛӨӨ\nСатып алуучу малды түздөн-түз поставщикке төлөйт. AGROMAL сервити алдын ала макулдашылган шарттарда төлөнөт.",
 
     /* FEATURES */
 
     featureVerifiedLot:
-      "ТЕКШЕРИЛГЕН ЛОТ",
+      "ЛОТТУ ТЕКШЕРҮҮ",
 
     featureVerifiedLotText:
-      "Ар бир мал партиясын идентификациялоо, ветеринардык текшерүү жана фото-видео каттоо.",
+      "Партиянын текшерүүсүн уюштуруп, текшерүү, идентификациялоо жана фото-видео материалдарынын жыйынтыктарын жазып алабыз.",
 
     featureFullSupport:
-      "ТОЛУК КОШТОП ЖҮРҮҮ",
+      "КЕЛИШИМДИ КОШТОП ЖҮРҮҮ",
 
     featureFullSupportText:
-      "Ветеринардык-санитардык документтер жана бүтүмдөрдү юридикалык тариздөө.",
+      "Поставщик менен сатып алуучунун өз ара аракетин макулдаштырабыз, партиянын текшерүүсүн уюштурабыз жана келишимди коштойбуз.",
 
     featureDirectB2B:
       "ТҮЗ B2B-КЕЛИШИМДЕР",
 
     featureDirectB2BText:
-      "Ачык шарттар, белгиленген баа, ортомчуларсыз жана жашыруун комиссияларсыз.",
+      "Поставщик жана сатып алуучу келишимди түздөн-түз түзөт. Шарттар тараптар тарабынан макулдашылат. AGROMAL сервиси — келишимдин суммасынан 4%.",
 
     /* SYSTEMS */
 
-    kyrgyzEmblem:
-      "",
         regionBatken: "Баткен облусу",
         regionJalalAbad: "Жалал-Абад облусу",
         regionIssykKul: "Ысык-Көл облусу",
@@ -2017,29 +1995,13 @@ lotImageRemove:
         regionOsh: "Ош облусу",
         regionTalas: "Талас облусу",
         regionChuy: "Чүй облусу",
-    tunduk:
-      "ТҮНДҮК",
 
-    iszh:
-      "ИСЖ",
 
-    ettnGns:
-      "ЭТТН / ГНС КР",
 
-    digitalAgroPlatform:
-      "DIGITAL AGRO-PLATFORM 2026",
 
-    halal:
-      "Halal",
 
-    halalSegment:
-      "HALAL СЕГМЕНТИ",
 
-    halalCompliance:
-      "HALAL COMPLIANCE",
 
-    halalStandard:
-      "АДАЛ СТАНДАРТЫ",
 
     /* LOGIN */
 
@@ -2053,10 +2015,10 @@ lotImageRemove:
       "УЮМДУН ИНН",
 
     identifierPlaceholder:
-      "Уюмдун ID же ИНН номерин киргизиңиз",
+      "Уюмдун ИНН номерин киргизиңиз",
 
     identifierAria:
-      "Уюмдун ID же ИНН номери",
+      "Уюмдун ИНН номери",
 
     password:
       "КИРҮҮ СЫРСӨЗҮ",
@@ -2074,7 +2036,7 @@ lotImageRemove:
       "Сырсөздү жашыруу",
 
     connect:
-      "⚡ СООДА СЕССИЯСЫНА КОШУЛУУ",
+      "AGROMALГА КИРҮҮ",
 
     connecting:
       "КОШУЛУУДА…",
@@ -2127,17 +2089,17 @@ lotImageRemove:
       "САТЫП АЛУУЧУЛАР ҮЧҮН",
 
     buyerAccessText:
-      "Кайра иштетүүчү ишканалар, соода түйүндөрү, ресторан комплекстери жана кесипкөй сатып алуучулар үчүн жеткиликтүүлүк.",
+      "Эт кайра иштетүүчү ишканалар, дүң сатып алуучулар жана малды чоң партиялар менен сатып алуучу компаниялар үчүн.",
 
     supplierAccessTitle:
-      "ЛОТТОРДУ ЖАЙГАШТЫРУУ ЖАНА ЖАБДУУ",
+      "ПОСТАВЩИКТЕРГЕ ЖАНА ӨРӨКТӨШТӨРГӨ",
     currencyKgs: "Сом",
 currencyKzt: "Теңге",
 currencyRub: "Рубль",
 currencyEur: "Евро",
 currencyUsd: "Доллар",
     supplierAccessText:
-      "Фермердик чарбалардан жана платформанын талаа инспекторлорунан малдын дүң партияларын акысыз жайгаштыруу үчүн өтүнмөлөрдү кабыл алуу.",
+      "Фермерлерден жана чарбалардан мал партияларын акысыз алдын ала жайгаштыруу. Платформанын талаа инспекторлору жана өрөктөштөр чоң партиялар жөнүндө сунуштарды өткөрө алат.",
 
     /* SUPPORT */
 
@@ -2180,7 +2142,7 @@ currencyUsd: "Доллар",
     lotRegionLabel: "Аймак",
     lotKazyLabel: "Казы",
     terminalTitle: "AGROMALга кирүү",
-    terminalSub: "Тек гана активдүү текшерилген уюмдар үчүн",
+    terminalSub: "Профессионалдык сатып алуучулар жана мал поставщиктери үчүн жабык B2B-платформа",
     taglineBefore: "ДҮҢ МАЛ ПАРТИЯЛАРЫ",
     footerLegalTitle2: "Платформанын юридикалык абалы",
     footerLegalText1: "AGROMAL — жеткирүүчүлөр менен сатып алуучулардын өз ара аракеттенүүсү үчүн көзкарандысыз маалыматтык-техникалык B2B-платформа.",
@@ -2189,7 +2151,6 @@ currencyUsd: "Доллар",
     trustVerified: "Текшерилген келишимдер",
     supportTitle: "Корпоративдик колдоо кызматы",
     supportMuted: "Кол менен текшерүү үчүн координатор менен байланышыңыз",
-    syncLabel: "Электрондук документ жүгүртүү",
     navProblem: "ПРОБЛЕМА",
     navHow: "КАНТИП ИШТЕЙТ",
     navLots: "АЧЫК ЛОТТОР",
@@ -2199,18 +2160,17 @@ currencyUsd: "Доллар",
     heroCtaHow: "Платформа кантип иштейт",
 
     problemKicker: "AGROMAL ЧЕЧКЕН КӨЙГӨЙ",
-    problemTitle: "Малды рыноктон жана артыкчылыксыз делдалдардан тышкары түз сатып алуу.",
-    problemFact: "2026-жылы Кыргызстандын малчылары малды рыноктордон жана делдалдык кызматтардан сатып алуунун ордуна түз сатып алуу механизмин өнүктүрүү зарылдыгын белгилешти.",
-    problemSolution: "AGROMAL мындай өз ара аракеттенүү үчүн цифрдык инфраструктурады түзөт — фермерлерди кесипкөй сатып алуучулар менен түз байланыштырат.",
-    problemSource: "Булак: Кыргыз Республикасынын Экономика жана соода министерствосунун алдындагы Антимонополиялык жөнгө салуу кызматы, 2026-ж.",
+    problemTitle: "ЧОҢ МАЛ ПАРТИЯЛАРЫ — ТҮЗ ЧАРБАЛАРДАН САТЫП АЛУУЧУЛАРГА",
+    problemFact: "Фермерлерге чоң мал партиясына сатып алуучу табыш кыйын болушу мүмкүн, ал эми сатып алуучуларга — ар кандай чарбалардан ылайыктуу сунуштарды чогултуу.\nAGROMAL структуураланган дүң лотторду түзөт, текшерүүнү уюштурат жана түз келишимдер үчүн поставщиктерди кесипкөй сатып алуучулар менен байланыштырат.",
+    problemSolution: "AGROMAL — чоң партияларды түзүү жана тирүү мал менен дүң соода-саттыктарын уюштуруу үчүн жалпы канал.",
 
     howKicker: "ПЛАТФОРМАНЫН ИШТӨӨ ПРИНЦИБИ",
-    howLead: "Сатуу-сатып алуу келишими фермер жана сатып алуучунун ортосунда түз гана түзүлөт. Мал үчүн акы тараптардын ортосунда түз төлөнөт.",
-    featureNote: "AGROMALдын талаадагы текшерүүсү жана верификациясы милдеттүү ветеринардык расмилештирүүнү алмаштырбайт.",
+    howLead: "Поставщик жана сатып алуучу сатуу-сатып алуу келишимин түздөн-түз түзөт. Мал үчүн төлөм тараптардын ортосунда түздөн-түз жүргүзүлөт.",
+    featureNote: "AGROMALдын текшерүүсү милдеттүү ветеринардык документтерди алмаштырбайт.",
 
     lotsKicker: "АЧЫК ЛОТТОР",
-    lotsNotice: "Актуалдуу коммерциялык маалымат, көлөмдөр жана келишим шарттары катталган катышуучуларга гана B2B-текшерүүдөн кийин жеткиликтүү.",
-    lotsNoticeBody: "Фото-видео материалдар, так көлөмдөр жана коммерциялык шарттар каттодон жана B2B-текшерүүдөн кийин жеткиликтүү. Ачык лоттор демонстрациялык форматта берилди.",
+    lotsNotice: "Реалдуу дүң сунуштары жөнүндө толук маалымат статусу ырасталган катталган сатып алуучуларга жеткиликтүү.",
+    lotsNoticeBody: "Сүрөттөр, видеолор, толук мүнөздөмөлөр жана коммерциялык шарттар каттодон жана сатып алуучунун статусын ырастоодон кийин жеткиликтүү.",
     lotsNoticeTitle: "Купуялык режими.",
 
     termsKicker: "ФЕРМЕР ЖАНА САТЫП АЛУУЧУ ҮЧҮН ШАРТТАР",
@@ -3797,68 +3757,50 @@ lotImageProcessingFailed:
       "HOW THE PLATFORM WORKS",
 
     principle1:
-      "The farmer states the net price.",
+      "PRICE\nThe supplier sets the price of their batch.",
 
     principle2:
-      "AGROMAL verifies the lot, checks animal identification, and prepares the trading offer.",
+      "LOT FORMATION\nAGROMAL collects information about the batch, prepares the offer and arranges verification at the appropriate stage.",
 
     principle3:
-      "The buyer receives verified volume at a pre-agreed price. Pays the farmer directly.",
+      "BUYER'S CHOICE\nThe buyer receives information about the batch, its price and the results of the verification carried out.",
 
     principle4:
-      "The farmer receives 100% of the agreed value at the farm gate — NO HAGGLING.",
+      "DIRECT DEAL\nThe supplier and the buyer agree on the final terms and conclude the sale-and-purchase contract directly.",
 
     principle5:
-      "A fixed service fee is charged only on a completed transaction.",
+      "PAYMENT\nThe buyer pays for the livestock directly to the supplier. The AGROMAL service is paid on pre-agreed terms.",
 
     /* FEATURES */
 
     featureVerifiedLot:
-      "VERIFIED LOT",
+      "LOT VERIFICATION",
 
     featureVerifiedLotText:
-      "Identification, veterinary inspection, and photo-video documentation for every livestock batch.",
+      "We arrange the verification of the batch and record the results of the inspection, identification and photo and video materials.",
 
     featureFullSupport:
-      "FULL SUPPORT",
+      "DEAL SUPPORT",
 
     featureFullSupportText:
-      "Veterinary and sanitary documentation and legal transaction support.",
+      "We coordinate the interaction between the supplier and the buyer, arrange the verification of the batch and support the deal.",
 
     featureDirectB2B:
       "DIRECT B2B DEALS",
 
     featureDirectB2BText:
-      "Transparent terms, fixed pricing, no intermediaries, and no hidden commissions.",
+      "The supplier and the buyer conclude the contract directly. The terms are agreed by the parties. The AGROMAL service is 4% of the deal amount.",
 
     /* SYSTEMS */
 
-    kyrgyzEmblem:
-      "",
 
-    tunduk:
-      "TUNDÜK",
 
-    iszh:
-      "ISZH",
 
-    ettnGns:
-      "ETTN / STS KR",
 
-    digitalAgroPlatform:
-      "DIGITAL AGRO-PLATFORM 2026",
 
-    halal:
-      "Halal",
 
-    halalSegment:
-      "HALAL SEGMENT",
 
-    halalCompliance:
-      "HALAL COMPLIANCE",
 
-    halalStandard:
-      "ADAL STANDARD",
 
     /* LOGIN */
 
@@ -3872,19 +3814,19 @@ lotImageProcessingFailed:
       "ORGANIZATION TIN",
 
     identifierPlaceholder:
-      "Enter organization ID or TIN",
+      "Enter the organization TIN",
 
     identifierAria:
-      "Organization ID or TIN",
+      "Organization TIN",
 
     password:
-      "ACCESS PASSWORD",
+      "PASSWORD",
 
     passwordPlaceholder:
-      "Enter access password",
+      "Enter the password",
 
     passwordAria:
-      "Access password",
+      "Password",
 
     showPassword:
       "Show password",
@@ -3893,7 +3835,7 @@ lotImageProcessingFailed:
       "Hide password",
 
     connect:
-      "⚡ CONNECT TO TRADING SESSION",
+      "ENTER AGROMAL",
 
     connecting:
       "CONNECTING…",
@@ -3946,13 +3888,13 @@ lotImageProcessingFailed:
       "FOR BUYERS",
 
     buyerAccessText:
-      "Access for processing plants, retail chains, restaurant groups, and professional buyers.",
+      "For meat processing plants, wholesale buyers and companies purchasing livestock in large batches.",
 
     supplierAccessTitle:
-      "LOT PLACEMENT AND SUPPLY",
+      "FOR SUPPLIERS AND PARTNERS",
 
     supplierAccessText:
-      "Free submission of wholesale livestock lots by farms and field inspectors of the platform.",
+      "Free preliminary placement of livestock batches by farmers and farms. Field inspectors and partners can submit offers for large batches.",
 
     /* SUPPORT */
 
@@ -4001,7 +3943,7 @@ lotImageProcessingFailed:
     lotRegionLabel: "Region",
     lotKazyLabel: "Kazy",
     terminalTitle: "AGROMAL access",
-    terminalSub: "Only for active verified organizations",
+    terminalSub: "A closed B2B platform for professional buyers and livestock suppliers",
     taglineBefore: "WHOLESALE LIVESTOCK LOTS",
     footerLegalTitle2: "Legal status of the platform",
     footerLegalText1: "AGROMAL is an independent information-and-technology B2B platform for the interaction of Suppliers and Buyers of agricultural animals.",
@@ -4010,7 +3952,6 @@ lotImageProcessingFailed:
     trustVerified: "Verified deals",
     supportTitle: "Corporate support service",
     supportMuted: "Contact the coordinator for manual verification",
-    syncLabel: "Electronic document flow",
     navProblem: "Problem",
     navHow: "How it works",
     navLots: "Public lots",
@@ -4020,18 +3961,17 @@ lotImageProcessingFailed:
     heroCtaHow: "How the platform works",
 
     problemKicker: "THE PROBLEM AGROMAL SOLVES",
-    problemTitle: "Direct livestock purchases instead of markets and unnecessary intermediaries.",
-    problemFact: "In 2026, livestock farmers of Kyrgyzstan noted the need to develop a mechanism for direct purchase of livestock instead of buying through markets and intermediary services.",
-    problemSolution: "AGROMAL creates a digital infrastructure for such interaction — directly connecting farmers with professional buyers.",
-    problemSource: "Source: Antimonopoly Regulation Service under the Ministry of Economy and Commerce of the Kyrgyz Republic, 2026.",
+    problemTitle: "LARGE LIVESTOCK BATCHES — DIRECTLY FROM FARMS TO BUYERS",
+    problemFact: "It can be difficult for farmers to find a buyer for a large batch of livestock, and for buyers to gather suitable offers from different farms.\nAGROMAL forms structured wholesale lots, arranges verification and connects suppliers with professional buyers for concluding direct deals.",
+    problemSolution: "AGROMAL is a single channel for forming large batches and organising wholesale deals in live livestock.",
 
     howKicker: "HOW THE PLATFORM WORKS",
-    howLead: "The sale-and-purchase contract is concluded directly between the farmer and the buyer. Payment for livestock is made directly between the parties.",
-    featureNote: "AGROMAL's field inspection and verification do not replace mandatory veterinary registration.",
+    howLead: "The supplier and the buyer conclude the sale-and-purchase contract directly. Payment for the livestock is made directly between the parties.",
+    featureNote: "AGROMAL's verification does not replace mandatory veterinary documents.",
 
     lotsKicker: "PUBLIC LOTS",
-    lotsNotice: "Current commercial data, volumes and deal terms are available only to registered participants after B2B verification.",
-    lotsNoticeBody: "Photo and video materials, exact volumes and commercial terms are available after registration and B2B verification. Public lots are presented in a demonstration format.",
+    lotsNotice: "Detailed information about real wholesale offers is available to registered buyers after their status has been confirmed.",
+    lotsNoticeBody: "Photos, videos, detailed characteristics and commercial terms are available after registration and confirmation of the buyer's status.",
     lotsNoticeTitle: "Privacy mode.",
 
     termsKicker: "TERMS FOR FARMER AND BUYER",
